@@ -1,0 +1,31 @@
+{
+  "name": "SDOSKeyedCodable",
+  "platforms": {
+    "ios": "10.0"
+  },
+  "authors": "SDOS",
+  "version": "1.0.0",
+  "license": {
+    "type": "SDOS License"
+  },
+  "homepage": "https://svrgitpub.sdos.es/iOS/SDOSKeyedCodable",
+  "summary": "Librería que proporciona una implementación del protocolo Codable de Swift para mapeos más sencillos",
+  "source": {
+    "git": "https://svrgitpub.sdos.es/iOS/SDOSKeyedCodable.git",
+    "tag": "v1.0.0"
+  },
+  "frameworks": [
+    "Foundation"
+  ],
+  "requires_arc": true,
+  "subspecs": [
+    {
+      "name": "KeyedCodable",
+      "preserve_paths": "src/Classes/*",
+      "source_files": [
+        "src/Classes/*{*.swift}",
+        "src/Classes/**/*{*.swift}"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,642 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0FD41CB5DBE2616B42F91B49165E418F /* KeyedEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436595FECD256C1C9FA97DC29417B1F9 /* KeyedEncoder.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		106202FAB2F1771F011F05362C0C02C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		274012AFD9EB33270D0AC5085C5369FA /* SDOSKeyedCodable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB24A99FF804AD9BD78A83D8B98C348C /* SDOSKeyedCodable-dummy.m */; };
+		5E700DEAC3A768BF0BB5491C3A92C4E8 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320B640A96536018CE542696FA7C07C2 /* Key.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6B1A4180716D1858C95061F59E265B2D /* Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009E73B61FF0C012F93EC4ECAA6F28E2 /* Mapping.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		817A85C359F1B11B013C69AE3DF3ACB4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A11FA0CD32653DC8AFF293B7EA9E644 /* Helpers.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8DC255D7123A8568F135751DDEA9F76E /* Keyedable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0B1FE96C61EE08990B58AF5A2EE6C5 /* Keyedable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BD73EBD0669A4B5F1D3D664439E608DB /* Pods-SDOSKeyedCodable_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B0872600458B1C1E3EC99E790B517221 /* Pods-SDOSKeyedCodable_Example-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C649EB8AE9D3B60D679A05A7C627FBC0 /* Pods-SDOSKeyedCodable_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EC20F36C163A3096083F39AE1FE712 /* Pods-SDOSKeyedCodable_Example-dummy.m */; };
+		C8B2CEC73496791046C3737D751F56EF /* MappingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E49ED8BE99143B0310E2CC6D242D110 /* MappingType.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CCA79779F24FA76A60293D3C1917842E /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE98DA708F661AC757BEBAF14ACCEAF9 /* Operators.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D956BEDCC7DC2C027A6199CAA027FD1B /* KeyedDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEBDC8525AAACA3CA86D955DA01D92D /* KeyedDecoder.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F7F62CB4AC43931422C4EF9E481F4D42 /* SDOSKeyedCodable-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAED488AAFEDBEAEA28D68FA1C7D77B /* SDOSKeyedCodable-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B080B1E8DD0D69FB82B018E35F0E7700 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDF0F65D397554E0A733F5CC570515E6;
+			remoteInfo = SDOSKeyedCodable;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		009E73B61FF0C012F93EC4ECAA6F28E2 /* Mapping.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mapping.swift; path = src/Classes/Classes/Mapping.swift; sourceTree = "<group>"; };
+		0EEBDC8525AAACA3CA86D955DA01D92D /* KeyedDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyedDecoder.swift; path = src/Classes/Classes/KeyedDecoder.swift; sourceTree = "<group>"; };
+		23EB525EC6D5FCBB738115E72CE6D2CA /* Pods-SDOSKeyedCodable_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SDOSKeyedCodable_Example.release.xcconfig"; sourceTree = "<group>"; };
+		251C1595E76B7034E1BB95C2F79C7442 /* Pods-SDOSKeyedCodable_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SDOSKeyedCodable_Example.modulemap"; sourceTree = "<group>"; };
+		2F0B1FE96C61EE08990B58AF5A2EE6C5 /* Keyedable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keyedable.swift; path = src/Classes/Classes/Keyedable.swift; sourceTree = "<group>"; };
+		320B640A96536018CE542696FA7C07C2 /* Key.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Key.swift; path = src/Classes/Classes/Key.swift; sourceTree = "<group>"; };
+		37FC95BD9F8566A48991BD35D3131F38 /* Pods-SDOSKeyedCodable_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SDOSKeyedCodable_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		436595FECD256C1C9FA97DC29417B1F9 /* KeyedEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyedEncoder.swift; path = src/Classes/Classes/KeyedEncoder.swift; sourceTree = "<group>"; };
+		4A11FA0CD32653DC8AFF293B7EA9E644 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = src/Classes/Classes/Helpers.swift; sourceTree = "<group>"; };
+		4D4FD513B3E0F0BA7EAECF91DAB05859 /* Pods-SDOSKeyedCodable_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SDOSKeyedCodable_Example-resources.sh"; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6A6C58C386DBD78113FE27513E514DA2 /* SDOSKeyedCodable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = SDOSKeyedCodable.modulemap; path = ../../Headers/Public/SDOSKeyedCodable/SDOSKeyedCodable.modulemap; sourceTree = "<group>"; };
+		6FDAB65B005581C0415257C07A156AC8 /* Pods-SDOSKeyedCodable_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SDOSKeyedCodable_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		8E49ED8BE99143B0310E2CC6D242D110 /* MappingType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MappingType.swift; path = src/Classes/Classes/MappingType.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		98A25F4ED181D5A48EA80C3BFE5FAFE7 /* libPods-SDOSKeyedCodable_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SDOSKeyedCodable_Example.a"; path = "libPods-SDOSKeyedCodable_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AAED488AAFEDBEAEA28D68FA1C7D77B /* SDOSKeyedCodable-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SDOSKeyedCodable-umbrella.h"; path = "../../Headers/Public/SDOSKeyedCodable/SDOSKeyedCodable-umbrella.h"; sourceTree = "<group>"; };
+		A147EF2FE9411C04B1E0E97BF2F5ED75 /* SDOSKeyedCodable.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDOSKeyedCodable.xcconfig; sourceTree = "<group>"; };
+		A23D6D3683D164059DE92736228F78F7 /* SDOSKeyedCodable.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SDOSKeyedCodable.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A94EB1B38F5FFEB91EB110610EAB7F6D /* Pods-SDOSKeyedCodable_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SDOSKeyedCodable_Example-frameworks.sh"; sourceTree = "<group>"; };
+		AE98DA708F661AC757BEBAF14ACCEAF9 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = src/Classes/Classes/Operators.swift; sourceTree = "<group>"; };
+		B0872600458B1C1E3EC99E790B517221 /* Pods-SDOSKeyedCodable_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SDOSKeyedCodable_Example-umbrella.h"; sourceTree = "<group>"; };
+		C2EC20F36C163A3096083F39AE1FE712 /* Pods-SDOSKeyedCodable_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SDOSKeyedCodable_Example-dummy.m"; sourceTree = "<group>"; };
+		C8C1C4F8A118B9C11DB3792DCF1D1B01 /* SDOSKeyedCodable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDOSKeyedCodable-prefix.pch"; sourceTree = "<group>"; };
+		CD862E510DA845C1DA29BEE2FF2CE53F /* libSDOSKeyedCodable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSDOSKeyedCodable.a; path = libSDOSKeyedCodable.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDBDEF2921C30962E99A733BB2FC26F6 /* Readme.md */ = {isa = PBXFileReference; includeInIndex = 1; path = Readme.md; sourceTree = "<group>"; };
+		D99FDED33E60BB590B36D5E14C6162CE /* Pods-SDOSKeyedCodable_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SDOSKeyedCodable_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DB24A99FF804AD9BD78A83D8B98C348C /* SDOSKeyedCodable-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDOSKeyedCodable-dummy.m"; sourceTree = "<group>"; };
+		E4E9F700F8ECC445788313AEDF522926 /* SDOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDOS.h; path = src/Classes/SDOS.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		996792AF623ABA074787289062DD3D58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				106202FAB2F1771F011F05362C0C02C6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB551DBA6D292CB8ADBB1EB05E37DB49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FF32816B6E02999769FA9D2AC567BD /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F5ED23245B5CDE50B2B6D4057D60EE4 /* SDOSKeyedCodable */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		1428EB942A5E05A29FF283CB70613441 /* Pods-SDOSKeyedCodable_Example */ = {
+			isa = PBXGroup;
+			children = (
+				251C1595E76B7034E1BB95C2F79C7442 /* Pods-SDOSKeyedCodable_Example.modulemap */,
+				37FC95BD9F8566A48991BD35D3131F38 /* Pods-SDOSKeyedCodable_Example-acknowledgements.markdown */,
+				6FDAB65B005581C0415257C07A156AC8 /* Pods-SDOSKeyedCodable_Example-acknowledgements.plist */,
+				C2EC20F36C163A3096083F39AE1FE712 /* Pods-SDOSKeyedCodable_Example-dummy.m */,
+				A94EB1B38F5FFEB91EB110610EAB7F6D /* Pods-SDOSKeyedCodable_Example-frameworks.sh */,
+				4D4FD513B3E0F0BA7EAECF91DAB05859 /* Pods-SDOSKeyedCodable_Example-resources.sh */,
+				B0872600458B1C1E3EC99E790B517221 /* Pods-SDOSKeyedCodable_Example-umbrella.h */,
+				D99FDED33E60BB590B36D5E14C6162CE /* Pods-SDOSKeyedCodable_Example.debug.xcconfig */,
+				23EB525EC6D5FCBB738115E72CE6D2CA /* Pods-SDOSKeyedCodable_Example.release.xcconfig */,
+			);
+			name = "Pods-SDOSKeyedCodable_Example";
+			path = "Target Support Files/Pods-SDOSKeyedCodable_Example";
+			sourceTree = "<group>";
+		};
+		33C6EDCF77C184EE679B73DFEAA13643 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF04F7BFB03E6518D6A45788C1682D1C /* SDOS */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		375E1409F35D4759D60FF635893FA4BA /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				E4E9F700F8ECC445788313AEDF522926 /* SDOS.h */,
+			);
+			name = Default;
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5E590C4C758B291B7C37D2DBA873D64B /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				CDBDEF2921C30962E99A733BB2FC26F6 /* Readme.md */,
+				A23D6D3683D164059DE92736228F78F7 /* SDOSKeyedCodable.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		5F5ED23245B5CDE50B2B6D4057D60EE4 /* SDOSKeyedCodable */ = {
+			isa = PBXGroup;
+			children = (
+				7FFEF43B30886F5DBB79C3DA1402364B /* KeyedCodable */,
+				5E590C4C758B291B7C37D2DBA873D64B /* Pod */,
+				88FC56CB89FAFF818EBF5E47A042C891 /* Support Files */,
+			);
+			name = SDOSKeyedCodable;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				08FF32816B6E02999769FA9D2AC567BD /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				33C6EDCF77C184EE679B73DFEAA13643 /* Pods */,
+				8A094CBAAF47D6F0AE3685B2855A3508 /* Products */,
+				C18565F78253C4415163F562FE2A0F49 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7FFEF43B30886F5DBB79C3DA1402364B /* KeyedCodable */ = {
+			isa = PBXGroup;
+			children = (
+				4A11FA0CD32653DC8AFF293B7EA9E644 /* Helpers.swift */,
+				320B640A96536018CE542696FA7C07C2 /* Key.swift */,
+				2F0B1FE96C61EE08990B58AF5A2EE6C5 /* Keyedable.swift */,
+				0EEBDC8525AAACA3CA86D955DA01D92D /* KeyedDecoder.swift */,
+				436595FECD256C1C9FA97DC29417B1F9 /* KeyedEncoder.swift */,
+				009E73B61FF0C012F93EC4ECAA6F28E2 /* Mapping.swift */,
+				8E49ED8BE99143B0310E2CC6D242D110 /* MappingType.swift */,
+				AE98DA708F661AC757BEBAF14ACCEAF9 /* Operators.swift */,
+			);
+			name = KeyedCodable;
+			sourceTree = "<group>";
+		};
+		88FC56CB89FAFF818EBF5E47A042C891 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A6C58C386DBD78113FE27513E514DA2 /* SDOSKeyedCodable.modulemap */,
+				A147EF2FE9411C04B1E0E97BF2F5ED75 /* SDOSKeyedCodable.xcconfig */,
+				DB24A99FF804AD9BD78A83D8B98C348C /* SDOSKeyedCodable-dummy.m */,
+				C8C1C4F8A118B9C11DB3792DCF1D1B01 /* SDOSKeyedCodable-prefix.pch */,
+				9AAED488AAFEDBEAEA28D68FA1C7D77B /* SDOSKeyedCodable-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Sample/SDOSKeyedCodable/Pods/Target Support Files/SDOSKeyedCodable";
+			sourceTree = "<group>";
+		};
+		8A094CBAAF47D6F0AE3685B2855A3508 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98A25F4ED181D5A48EA80C3BFE5FAFE7 /* libPods-SDOSKeyedCodable_Example.a */,
+				CD862E510DA845C1DA29BEE2FF2CE53F /* libSDOSKeyedCodable.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C18565F78253C4415163F562FE2A0F49 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1428EB942A5E05A29FF283CB70613441 /* Pods-SDOSKeyedCodable_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FF04F7BFB03E6518D6A45788C1682D1C /* SDOS */ = {
+			isa = PBXGroup;
+			children = (
+				375E1409F35D4759D60FF635893FA4BA /* Default */,
+			);
+			name = SDOS;
+			path = SDOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4AB1E47C94513BCBA074367AE4185CFA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7F62CB4AC43931422C4EF9E481F4D42 /* SDOSKeyedCodable-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61BE1FBA0C2171E1CE03131CF811DE5B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD73EBD0669A4B5F1D3D664439E608DB /* Pods-SDOSKeyedCodable_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8E715875F1364A7FF32DA86489CCD306 /* Pods-SDOSKeyedCodable_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BAA2CCA3D5ABB97042B3A29E1465445 /* Build configuration list for PBXNativeTarget "Pods-SDOSKeyedCodable_Example" */;
+			buildPhases = (
+				61BE1FBA0C2171E1CE03131CF811DE5B /* Headers */,
+				8AC14DD082AB486593490060E60437FE /* Sources */,
+				FB551DBA6D292CB8ADBB1EB05E37DB49 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6135D0E67C51232A63470600ACBE0A1 /* PBXTargetDependency */,
+			);
+			name = "Pods-SDOSKeyedCodable_Example";
+			productName = "Pods-SDOSKeyedCodable_Example";
+			productReference = 98A25F4ED181D5A48EA80C3BFE5FAFE7 /* libPods-SDOSKeyedCodable_Example.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DDF0F65D397554E0A733F5CC570515E6 /* SDOSKeyedCodable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7D4FA6F56D486684A22D3AE7FC44289 /* Build configuration list for PBXNativeTarget "SDOSKeyedCodable" */;
+			buildPhases = (
+				4AB1E47C94513BCBA074367AE4185CFA /* Headers */,
+				F548AFB61B2C4E317B9B3E49A247A696 /* Sources */,
+				996792AF623ABA074787289062DD3D58 /* Frameworks */,
+				7DBB238938CE995AD1D9AF20E82570A4 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDOSKeyedCodable;
+			productName = SDOSKeyedCodable;
+			productReference = CD862E510DA845C1DA29BEE2FF2CE53F /* libSDOSKeyedCodable.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 8A094CBAAF47D6F0AE3685B2855A3508 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E715875F1364A7FF32DA86489CCD306 /* Pods-SDOSKeyedCodable_Example */,
+				DDF0F65D397554E0A733F5CC570515E6 /* SDOSKeyedCodable */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7DBB238938CE995AD1D9AF20E82570A4 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/SDOSKeyedCodable/SDOSKeyedCodable.modulemap",
+				"${PODS_ROOT}/Headers/Public/SDOSKeyedCodable/SDOSKeyedCodable-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/SDOSKeyedCodable-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SDOSKeyedCodable/SDOSKeyedCodable.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SDOSKeyedCodable/SDOSKeyedCodable-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			showEnvVarsInLog = 1;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AC14DD082AB486593490060E60437FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C649EB8AE9D3B60D679A05A7C627FBC0 /* Pods-SDOSKeyedCodable_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F548AFB61B2C4E317B9B3E49A247A696 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				817A85C359F1B11B013C69AE3DF3ACB4 /* Helpers.swift in Sources */,
+				5E700DEAC3A768BF0BB5491C3A92C4E8 /* Key.swift in Sources */,
+				8DC255D7123A8568F135751DDEA9F76E /* Keyedable.swift in Sources */,
+				D956BEDCC7DC2C027A6199CAA027FD1B /* KeyedDecoder.swift in Sources */,
+				0FD41CB5DBE2616B42F91B49165E418F /* KeyedEncoder.swift in Sources */,
+				6B1A4180716D1858C95061F59E265B2D /* Mapping.swift in Sources */,
+				C8B2CEC73496791046C3737D751F56EF /* MappingType.swift in Sources */,
+				CCA79779F24FA76A60293D3C1917842E /* Operators.swift in Sources */,
+				274012AFD9EB33270D0AC5085C5369FA /* SDOSKeyedCodable-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6135D0E67C51232A63470600ACBE0A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDOSKeyedCodable;
+			target = DDF0F65D397554E0A733F5CC570515E6 /* SDOSKeyedCodable */;
+			targetProxy = B080B1E8DD0D69FB82B018E35F0E7700 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D054EAE2FB19673F63032C6D9311994 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A147EF2FE9411C04B1E0E97BF2F5ED75 /* SDOSKeyedCodable.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SDOSKeyedCodable/SDOSKeyedCodable-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = Headers/Public/SDOSKeyedCodable/SDOSKeyedCodable.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SDOSKeyedCodable;
+				PRODUCT_NAME = SDOSKeyedCodable;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4440B5B67A4D1D210207C3E0FDBF5BB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23EB525EC6D5FCBB738115E72CE6D2CA /* Pods-SDOSKeyedCodable_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SDOSKeyedCodable_Example/Pods-SDOSKeyedCodable_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		98BFD282C67F215B0A60DD459E3A3E71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A147EF2FE9411C04B1E0E97BF2F5ED75 /* SDOSKeyedCodable.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SDOSKeyedCodable/SDOSKeyedCodable-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = Headers/Public/SDOSKeyedCodable/SDOSKeyedCodable.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SDOSKeyedCodable;
+				PRODUCT_NAME = SDOSKeyedCodable;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2A19B57508EA952CE049CB99FD55A5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D99FDED33E60BB590B36D5E14C6162CE /* Pods-SDOSKeyedCodable_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SDOSKeyedCodable_Example/Pods-SDOSKeyedCodable_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C92782E717C52E3633C9A5F211E7987A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		EA8C7AF90938697605468604B2A17B9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C92782E717C52E3633C9A5F211E7987A /* Debug */,
+				EA8C7AF90938697605468604B2A17B9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BAA2CCA3D5ABB97042B3A29E1465445 /* Build configuration list for PBXNativeTarget "Pods-SDOSKeyedCodable_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2A19B57508EA952CE049CB99FD55A5C /* Debug */,
+				4440B5B67A4D1D210207C3E0FDBF5BB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7D4FA6F56D486684A22D3AE7FC44289 /* Build configuration list for PBXNativeTarget "SDOSKeyedCodable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D054EAE2FB19673F63032C6D9311994 /* Debug */,
+				98BFD282C67F215B0A60DD459E3A3E71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
