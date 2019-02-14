@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C38031F22157605004F1AE2 /* IndentedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C38031E22157605004F1AE2 /* IndentedObject.swift */; };
+		5C380321221577A7004F1AE2 /* ExampleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C380320221577A7004F1AE2 /* ExampleProtocol.swift */; };
 		5C8068F2221408A400FFACC3 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8068EA221408A400FFACC3 /* InitialViewController.swift */; };
 		5C8068F3221408A400FFACC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8068EB221408A400FFACC3 /* LaunchScreen.xib */; };
 		5C8068F4221408A400FFACC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8068ED221408A400FFACC3 /* Main.storyboard */; };
@@ -16,12 +18,21 @@
 		5C80690622140F8A00FFACC3 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C80690522140F8A00FFACC3 /* AppIcon.xcassets */; };
 		5C806909221420C100FFACC3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C806908221420C100FFACC3 /* Constants.swift */; };
 		5C80690D221421EF00FFACC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C80690F221421EF00FFACC3 /* Localizable.strings */; };
+		5CA9C9642215BD7D003EF197 /* allKeys.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CA9C9632215BD70003EF197 /* allKeys.txt */; };
+		5CA9C9662215BE39003EF197 /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9C9652215BE39003EF197 /* PaymentMethod.swift */; };
+		5CBF4589221553FB001152B6 /* ExampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF4588221553FB001152B6 /* ExampleListViewController.swift */; };
+		5CBF458C221554FB001152B6 /* ExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF458B221554FB001152B6 /* ExampleModel.swift */; };
+		5CBF458F221558DE001152B6 /* flatJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CBF458E221558DE001152B6 /* flatJSON.txt */; };
+		5CBF459222155C16001152B6 /* ShopDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF459122155C16001152B6 /* ShopDTO.swift */; };
+		5CBF4594221562E3001152B6 /* ExampleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF4593221562E3001152B6 /* ExampleDetailViewController.swift */; };
 		AE057A8045FA0A4D3F8A2998 /* libPods-SDOSKeyedCodable_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 511E497A2B99D6922EC7B91C /* libPods-SDOSKeyedCodable_Example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07075BC0257C52CBEE6D95AD /* Pods-SDOSKeyedCodable_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSKeyedCodable_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDOSKeyedCodable_Example/Pods-SDOSKeyedCodable_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		511E497A2B99D6922EC7B91C /* libPods-SDOSKeyedCodable_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDOSKeyedCodable_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C38031E22157605004F1AE2 /* IndentedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndentedObject.swift; sourceTree = "<group>"; };
+		5C380320221577A7004F1AE2 /* ExampleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleProtocol.swift; sourceTree = "<group>"; };
 		5C8068EA221408A400FFACC3 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		5C8068EC221408A400FFACC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5C8068EE221408A400FFACC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,6 +44,13 @@
 		5C80690522140F8A00FFACC3 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		5C806908221420C100FFACC3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5C80690E221421EF00FFACC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5CA9C9632215BD70003EF197 /* allKeys.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = allKeys.txt; sourceTree = "<group>"; };
+		5CA9C9652215BE39003EF197 /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
+		5CBF4588221553FB001152B6 /* ExampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListViewController.swift; sourceTree = "<group>"; };
+		5CBF458B221554FB001152B6 /* ExampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleModel.swift; sourceTree = "<group>"; };
+		5CBF458E221558DE001152B6 /* flatJSON.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flatJSON.txt; sourceTree = "<group>"; };
+		5CBF459122155C16001152B6 /* ShopDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDTO.swift; sourceTree = "<group>"; };
+		5CBF4593221562E3001152B6 /* ExampleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleDetailViewController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SDOSKeyedCodable_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDOSKeyedCodable_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACC9006D147758014EEB3D8 /* Pods-SDOSKeyedCodable_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSKeyedCodable_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDOSKeyedCodable_Example/Pods-SDOSKeyedCodable_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,10 +76,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5C38031D221575F7004F1AE2 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				5C38031E22157605004F1AE2 /* IndentedObject.swift */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
 		5C8068E9221408A400FFACC3 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				5C8068F0221408A400FFACC3 /* AppDelegate.swift */,
+				5CBF458A221554D5001152B6 /* Model */,
 				5C8068FF22140CD500FFACC3 /* Controllers */,
 				5C8068F82214096500FFACC3 /* Configuration */,
 				5C80690222140D1A00FFACC3 /* Other */,
@@ -100,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				5C8068EA221408A400FFACC3 /* InitialViewController.swift */,
+				5CBF4588221553FB001152B6 /* ExampleListViewController.swift */,
+				5CBF4593221562E3001152B6 /* ExampleDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -116,6 +145,7 @@
 		5C80690222140D1A00FFACC3 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5C38031D221575F7004F1AE2 /* Libs */,
 				5C806907221420B300FFACC3 /* Constants */,
 				5C80690A221421B000FFACC3 /* Localization */,
 				5C80690322140D3700FFACC3 /* Resources */,
@@ -146,6 +176,35 @@
 				5C80690F221421EF00FFACC3 /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		5CA9C9622215BD69003EF197 /* AllKeys */ = {
+			isa = PBXGroup;
+			children = (
+				5CA9C9632215BD70003EF197 /* allKeys.txt */,
+				5CA9C9652215BE39003EF197 /* PaymentMethod.swift */,
+			);
+			path = AllKeys;
+			sourceTree = "<group>";
+		};
+		5CBF458A221554D5001152B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5CA9C9622215BD69003EF197 /* AllKeys */,
+				5CBF459022155BD2001152B6 /* FlatJSON */,
+				5CBF458B221554FB001152B6 /* ExampleModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5CBF459022155BD2001152B6 /* FlatJSON */ = {
+			isa = PBXGroup;
+			children = (
+				5CBF458E221558DE001152B6 /* flatJSON.txt */,
+				5CBF459122155C16001152B6 /* ShopDTO.swift */,
+				5C380320221577A7004F1AE2 /* ExampleProtocol.swift */,
+			);
+			path = FlatJSON;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -237,10 +296,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C80690622140F8A00FFACC3 /* AppIcon.xcassets in Resources */,
+				5CBF458F221558DE001152B6 /* flatJSON.txt in Resources */,
 				5C80690D221421EF00FFACC3 /* Localizable.strings in Resources */,
 				5C8068F5221408A400FFACC3 /* Images.xcassets in Resources */,
 				5C8068F3221408A400FFACC3 /* LaunchScreen.xib in Resources */,
 				5C8068F4221408A400FFACC3 /* Main.storyboard in Resources */,
+				5CA9C9642215BD7D003EF197 /* allKeys.txt in Resources */,
 				5C8068FD2214098900FFACC3 /* Shared.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,9 +338,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CBF4594221562E3001152B6 /* ExampleDetailViewController.swift in Sources */,
+				5C38031F22157605004F1AE2 /* IndentedObject.swift in Sources */,
 				5C8068F6221408A400FFACC3 /* AppDelegate.swift in Sources */,
+				5CBF458C221554FB001152B6 /* ExampleModel.swift in Sources */,
+				5CBF4589221553FB001152B6 /* ExampleListViewController.swift in Sources */,
+				5C380321221577A7004F1AE2 /* ExampleProtocol.swift in Sources */,
+				5CBF459222155C16001152B6 /* ShopDTO.swift in Sources */,
 				5C8068F2221408A400FFACC3 /* InitialViewController.swift in Sources */,
 				5C806909221420C100FFACC3 /* Constants.swift in Sources */,
+				5CA9C9662215BE39003EF197 /* PaymentMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

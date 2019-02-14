@@ -9,3 +9,21 @@
 "SDOSKeyedCodableExample.version" = "Versión %@";
 "SDOSKeyedCodableExample.alertOkActionTitle" = "OK";
 "SDOSKeyedCodableExample.btn.seeExample" = "Ver ejemplo";
+
+"SDOSKeyedCodableExample.type.section.description" = "Descripción";
+"SDOSKeyedCodableExample.type.section.json" = "JSON";
+"SDOSKeyedCodableExample.type.section.typeToParse" = "Objeto de parseo";
+"SDOSKeyedCodableExample.type.section.mapImplementation" = "Propiedades y mapping";
+"SDOSKeyedCodableExample.type.section.decodedObject" = "Objeto parseado";
+
+
+// Flat json
+"SDOSKeyedCodableExample.type.flat.name" = "Flat json";
+"SDOSKeyedCodableExample.type.flat.description" = "Permite agrupar claves que vienen en la raiz del json dentro de un objeto";
+"SDOSKeyedCodableExample.type.flat.detailedDescription" = "En este caso, el json trae en la raiz los campos 'latitude' y 'longitude'.\nQueremos introducir esos dos valores dentro de una propiedad 'location' de tipo Location del objeto de parseo 'ShopDTO', que será la que tenga las propiedades 'latitude' y 'longitude'.";
+
+
+// All keys
+"SDOSKeyedCodableExample.type.allKeys.name" = "All keys";
+"SDOSKeyedCodableExample.type.allKeys.description" = "Permite intentar el parseo de un mismo objeto en todas las 'keys' del json";
+"SDOSKeyedCodableExample.type.allKeys.detailedDescription" = "En este caso, el json trae varias claves (\"0\", \"1\" y \"2\") en las que vienen objetos de la misma clase. Con la implementación de este ejemplo, se puede parsear fácilmente todos esos objetos en un mismo array sin necesidad de tener 3 propiedades (una para cada clave) en el objeto de parseo.";

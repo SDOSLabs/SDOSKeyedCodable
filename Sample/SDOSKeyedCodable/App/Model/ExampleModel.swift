@@ -1,0 +1,99 @@
+//
+//  ExampleModel.swift
+//  SDOSKeyedCodable_Example
+//
+//  Created by Antonio Jesús Pallares on 14/02/2019.
+//  Copyright © 2019 SDOS. All rights reserved.
+//
+
+import Foundation
+
+enum ExampleType: CaseIterable {
+    case flatJSON, allKeys
+    
+    func getJSON() -> String? {
+        let resourceName: String
+        switch self {
+        case .flatJSON:
+            resourceName = "flatJSON"
+        case .allKeys:
+            resourceName = "allKeys"
+        }
+        return getStringForResource(name: resourceName)
+    }
+    
+    func parseJSON() throws -> Decodable  {
+        guard
+            let json = getJSON(),
+            let jsonData = json.data(using: .utf8)
+            else {
+                throw NSError(domain: "recurso json no disponible", code: 0, userInfo: nil)
+        }
+        
+        let obj: Decodable
+        
+        do {
+            switch self {
+            case .flatJSON:
+                obj = try JSONDecoder().decode(ShopDTO.self, from: jsonData)
+            case .allKeys:
+                obj = try JSONDecoder().decode(PaymentMethods.self, from: jsonData)
+            }
+        } catch {
+            print(error)
+            throw error
+        }
+        return obj
+    }
+    
+    func getImplementation() -> String? {
+        switch self {
+        case .flatJSON:
+            return ShopDTO.implementation
+        case .allKeys:
+            return PaymentMethods.implementation
+        }
+    }
+    
+    func getTypeName() -> String? {
+        switch self {
+        case .flatJSON:
+            return String(describing: ShopDTO.self)
+        case .allKeys:
+            return String(describing: PaymentMethods.self)
+        }
+    }
+}
+
+struct Example {
+    let type: ExampleType
+    let title: String
+    let description: String
+    let detailedDescription: String
+    
+    init(type: ExampleType) {
+        self.type = type
+        switch type {
+        case .flatJSON:
+            title = NSLocalizedString("SDOSKeyedCodableExample.type.flat.name", comment: "")
+            description = NSLocalizedString("SDOSKeyedCodableExample.type.flat.description", comment: "")
+            detailedDescription = NSLocalizedString("SDOSKeyedCodableExample.type.flat.detailedDescription", comment: "")
+        case .allKeys:
+            title = NSLocalizedString("SDOSKeyedCodableExample.type.allKeys.name", comment: "")
+            description = NSLocalizedString("SDOSKeyedCodableExample.type.allKeys.description", comment: "")
+            detailedDescription = NSLocalizedString("SDOSKeyedCodableExample.type.allKeys.detailedDescription", comment: "")
+        }
+    }
+}
+
+
+fileprivate func getStringForResource(name: String) -> String? {
+    if
+        let filePath = Bundle.main.path(forResource: name, ofType: "txt"),
+        let jsonStr = try? String(contentsOfFile: filePath) {
+        return jsonStr
+    } else {
+        return nil
+    }
+    
+}
