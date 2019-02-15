@@ -1,0 +1,39 @@
+{
+    "* name": "John",
+    "": {
+        "latitude" : 4,
+        "longitude" : 5,
+        ".greeting": "Hallo world",
+        "details": {
+            "description": "Its nice here"
+            }
+        },
+    "longitude": 3.2,
+    "latitude": 3.4,
+    "array": [
+        {
+            "id": 1
+        },
+        {},
+        {
+            "name": "nombre prueba"
+        },
+        {
+            "id": 4,
+            "name": "nombre 4"
+        }
+    ],
+    "* array1": [
+        {
+            "id": null
+        },
+        {},
+        {
+            "id": 3
+        },
+        {
+            "id": 4,
+            "name": "Object 4"
+        }
+    ]
+}

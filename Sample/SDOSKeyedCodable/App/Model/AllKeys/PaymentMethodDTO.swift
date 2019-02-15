@@ -9,12 +9,12 @@
 import Foundation
 import SDOSKeyedCodable
 
-struct PaymentMethod: Decodable {
+struct PaymentMethodDTO: Decodable {
     var type: String?
 }
 
 struct PaymentMethods: Decodable, Keyedable {
-    var userPaymentMethods: [PaymentMethod] = []
+    var userPaymentMethods: [PaymentMethodDTO] = []
     
     mutating func map(map: KeyMap) throws {
         guard case .decoding(let keys) = map.type else { return }
@@ -22,7 +22,7 @@ struct PaymentMethods: Decodable, Keyedable {
         let allKeys = keys.all(for: Key(stringValue: "vault"))//all(for: CodingKey(stringValue: "vault"))
             
             allKeys.forEach {
-                var paymentMethod: PaymentMethod?
+                var paymentMethod: PaymentMethodDTO?
                 try? paymentMethod <<- map[$0]
                 if let paymentMethod = paymentMethod {
                     userPaymentMethods.append(paymentMethod)

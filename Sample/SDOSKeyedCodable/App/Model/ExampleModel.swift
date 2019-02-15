@@ -9,7 +9,7 @@
 import Foundation
 
 enum ExampleType: CaseIterable {
-    case flatJSON, allKeys
+    case flatJSON, allKeys, optionalArrayElements, keyOptions
     
     func getJSON() -> String? {
         let resourceName: String
@@ -18,6 +18,10 @@ enum ExampleType: CaseIterable {
             resourceName = "flatJSON"
         case .allKeys:
             resourceName = "allKeys"
+        case .optionalArrayElements:
+            resourceName = "optionalArrayElements"
+        case .keyOptions:
+            resourceName = "keyOptions"
         }
         return getStringForResource(name: resourceName)
     }
@@ -38,6 +42,10 @@ enum ExampleType: CaseIterable {
                 obj = try JSONDecoder().decode(ShopDTO.self, from: jsonData)
             case .allKeys:
                 obj = try JSONDecoder().decode(PaymentMethods.self, from: jsonData)
+            case .optionalArrayElements:
+                obj = try JSONDecoder().decode(OptionalArray.self, from: jsonData)
+            case .keyOptions:
+                obj = try JSONDecoder().decode(KeyOptionsExampleDTO.self, from: jsonData)
             }
         } catch {
             print(error)
@@ -52,6 +60,10 @@ enum ExampleType: CaseIterable {
             return ShopDTO.implementation
         case .allKeys:
             return PaymentMethods.implementation
+        case .optionalArrayElements:
+            return OptionalArray.implementation
+            case .keyOptions:
+            return KeyOptionsExampleDTO.implementation
         }
     }
     
@@ -61,6 +73,10 @@ enum ExampleType: CaseIterable {
             return String(describing: ShopDTO.self)
         case .allKeys:
             return String(describing: PaymentMethods.self)
+        case .optionalArrayElements:
+            return String(describing: OptionalArray.self)
+        case .keyOptions:
+            return String(describing: KeyOptionsExampleDTO.self)
         }
     }
 }
@@ -82,6 +98,14 @@ struct Example {
             title = NSLocalizedString("SDOSKeyedCodableExample.type.allKeys.name", comment: "")
             description = NSLocalizedString("SDOSKeyedCodableExample.type.allKeys.description", comment: "")
             detailedDescription = NSLocalizedString("SDOSKeyedCodableExample.type.allKeys.detailedDescription", comment: "")
+        case .optionalArrayElements:
+            title = NSLocalizedString("SDOSKeyedCodableExample.type.optionalArrayElements.name", comment: "")
+            description = NSLocalizedString("SDOSKeyedCodableExample.type.optionalArrayElements.description", comment: "")
+            detailedDescription = NSLocalizedString("SDOSKeyedCodableExample.type.optionalArrayElements.detailedDescription", comment: "")
+        case .keyOptions:
+            title = NSLocalizedString("SDOSKeyedCodableExample.type.keyOptions.name", comment: "")
+            description = NSLocalizedString("SDOSKeyedCodableExample.type.keyOptions.description", comment: "")
+            detailedDescription = NSLocalizedString("SDOSKeyedCodableExample.type.keyOptions.detailedDescription", comment: "")
         }
     }
 }

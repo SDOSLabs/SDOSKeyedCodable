@@ -35,6 +35,7 @@ class InitialViewController: UIViewController {
     
     @IBOutlet weak var lbVersion: UILabel!
     
+    @IBOutlet weak var viewBottonBar: UIView!
     
     lazy private var webView: WKWebView = {
         let webView = WKWebView(frame: viewForWebView.bounds)

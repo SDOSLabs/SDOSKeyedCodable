@@ -160,7 +160,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="snU-Cx-MoC" firstAttribute="top" secondItem="H7U-cN-Nzx" secondAttribute="top" id="8zM-qm-bUd"/>
                                             <constraint firstItem="Cpe-8c-jM1" firstAttribute="top" secondItem="hOp-Lo-Xma" secondAttribute="top" id="FRe-Ye-MKq"/>
@@ -182,6 +181,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="SYY-nR-DnJ" firstAttribute="bottom" secondItem="hOp-Lo-Xma" secondAttribute="bottom" id="QuA-1M-K4S"/>
                                     <constraint firstItem="hOp-Lo-Xma" firstAttribute="top" secondItem="SYY-nR-DnJ" secondAttribute="top" id="fJQ-OO-kcj"/>
@@ -191,7 +191,7 @@
                                 <viewLayoutGuide key="safeArea" id="SYY-nR-DnJ"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nIx-e0-LcM" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="H08-Zj-HMC"/>
                             <constraint firstAttribute="trailing" secondItem="ZHd-MI-Osr" secondAttribute="trailing" id="Nhc-6n-1mC"/>
@@ -208,6 +208,7 @@
                         <outlet property="btnGoBack" destination="H7U-cN-Nzx" id="2T9-lY-Zfe"/>
                         <outlet property="btnGoForward" destination="snU-Cx-MoC" id="NSY-M3-rRZ"/>
                         <outlet property="lbVersion" destination="Bfh-kN-E17" id="g4d-OH-unP"/>
+                        <outlet property="viewBottonBar" destination="ZHd-MI-Osr" id="4fe-Qm-HQg"/>
                         <outlet property="viewForWebView" destination="nIx-e0-LcM" id="4qn-x5-dlg"/>
                     </connections>
                 </viewController>

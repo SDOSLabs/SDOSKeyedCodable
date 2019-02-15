@@ -67,6 +67,8 @@ class ExampleDetailViewController: UIViewController {
     }
     
     var arrayModel = [DetailSection]()
+    
+    fileprivate static let CodeTableViewCellIdentifier = "CodeTableViewCellIdentifier"
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -74,6 +76,7 @@ class ExampleDetailViewController: UIViewController {
             tableView.allowsSelection = false
             tableView.dataSource = self
             tableView.delegate = self
+            tableView.register(UINib(nibName: "CodeTableViewCell", bundle: nil), forCellReuseIdentifier: ExampleDetailViewController.CodeTableViewCellIdentifier)
         }
     }
     

@@ -37,15 +37,7 @@ struct IndentedObject {
     
     static func getPlainListOfIndentedObjects(from object: Any) -> [IndentedObject] {
         let objects = getIndentedObjects(from: object, indentationLevel: 0)
-        
-        var i = 0
-        var finalList = objects
-        while i < finalList.count {
-            finalList.append(contentsOf: finalList[i].children)
-            i = i + 1
-        }
-        
-        return finalList
+        return flatten(indentedObjects: objects)
     }
     
     static func getIndentedObjects(from object: Any, indentationLevel level: Int = 0) -> [IndentedObject] {
@@ -71,6 +63,17 @@ struct IndentedObject {
                 return IndentedObject(indentationLevel: level, text: text, children: objects)
             }
         }
+    }
+    
+    private static func flatten(indentedObjects: [IndentedObject]) -> [IndentedObject] {
+        var finalArray = [IndentedObject]()
+        for obj in indentedObjects {
+            finalArray.append(obj)
+            if obj.children.count > 0 {
+                finalArray.append(contentsOf: flatten(indentedObjects: obj.children))
+            }
+        }
+        return finalArray
     }
     
     private static func getFinalStringFor(label: String?, value: StringRepresentable) -> String {
