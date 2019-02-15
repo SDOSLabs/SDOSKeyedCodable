@@ -1,0 +1,5 @@
+{
+    "shop_name" : "Fnac",
+    "latitude" : 37.3913259,
+    "longitude" : -6.01025
+}

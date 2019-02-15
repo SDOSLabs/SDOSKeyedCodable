@@ -1,0 +1,6 @@
+module Pods_SDOSKeyedCodable_Example {
+  umbrella header "Pods-SDOSKeyedCodable_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
