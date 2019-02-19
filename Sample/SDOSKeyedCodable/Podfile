@@ -10,6 +10,6 @@ def shared_pods
 	pod 'SDOSKeyedCodable', :path => '../../'
 end
 
-target :SDOSKeyedCodable_Example do
+target :SDOSKeyedCodableSample do
 	shared_pods
 end

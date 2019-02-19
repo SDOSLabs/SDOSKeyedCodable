@@ -1,6 +1,0 @@
-framework module SDOSKeyedCodable {
-  umbrella header "SDOSKeyedCodable-umbrella.h"
-
-  export *
-  module * { export * }
-}
