@@ -1,6 +1,6 @@
 @version = "1.0.0"
 Pod::Spec.new do |spec|
-  spec.platform     = :ios, '10.0'
+  spec.platform     = :ios, '9.0'
   spec.name         = 'SDOSKeyedCodable'
   spec.authors      = 'SDOS'
   spec.version      = @version
