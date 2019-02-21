@@ -1,0 +1,13 @@
+{
+    "vault": {
+        "0": {
+            "type": "Braintree_CreditCard0"
+        },
+        "1": {
+            "type": "Braintree_CreditCard1"
+        },
+        "2": {
+            "type": "Braintree_PayPalAccount2"
+        },
+    }
+}

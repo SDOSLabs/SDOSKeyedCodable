@@ -1,0 +1,15 @@
+source 'http://git.sdos.es/ios/cocoapods-specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
+use_modular_headers!
+inhibit_all_warnings!
+
+def shared_pods
+    pod 'SDOS/Default'
+	pod 'SDOSKeyedCodable', :path => '../../'
+end
+
+target :SDOSKeyedCodableSample do
+	shared_pods
+end
