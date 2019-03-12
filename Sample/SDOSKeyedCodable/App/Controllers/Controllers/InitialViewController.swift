@@ -121,9 +121,6 @@ class InitialViewController: UIViewController {
         updateBackForwardButtons()
     }
     
-    @IBAction func actionSeeExample(_ sender: Any) {
-        
-    }
 }
 
 extension InitialViewController: WKNavigationDelegate {

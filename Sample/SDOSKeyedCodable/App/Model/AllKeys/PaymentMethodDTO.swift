@@ -19,7 +19,7 @@ struct PaymentMethods: Decodable, Keyedable {
     mutating func map(map: KeyMap) throws {
         guard case .decoding(let keys) = map.type else { return }
         
-        let allKeys = keys.all(for: Key(stringValue: "vault"))//all(for: CodingKey(stringValue: "vault"))
+        let allKeys = keys.all(for: Key(stringValue: "vault"))
             
             allKeys.forEach {
                 var paymentMethod: PaymentMethodDTO?
