@@ -1,5 +1,7 @@
 # SDOSKeyedCodable
 
+- Para consultar los últimos cambios en la librería consultar el [CHANGELOG.md](https://svrgitpub.sdos.es/iOS/SDOSKeyedCodable/blob/master/CHANGELOG.md).
+
 - Enlace confluence: https://kc.sdos.es/x/FALLAQ
 
 ## Introducción
