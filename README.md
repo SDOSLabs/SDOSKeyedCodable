@@ -363,15 +363,19 @@ SDOSKeyedCodable permite configurar las opciones de mapeo avanzadas que proporci
 Todo esto se hace con el `KeyOptions`.
 
 ## Proyecto de ejemplo
+
 * Descargar el proyecto SDOSKeyedCodable desde el siguiente enlace: https://svrgitpub.sdos.es/iOS/SDOSKeyedCodable.
 * Comprobar que, al pulsar el botón **Ver ejemplo** se muestra una app que permite probar las distintas funcionalidades de SDOSKeyedCodable.
 
-## Desarrollo de la librería
-* Descargar el repositorio a través de la app SourceTree desde el siguiente enlace: https://svrgitpub.sdos.es/iOS/SDOSKeyedCodable.
-* Se debe de seguir el flujo de trabajo del siguiente enlace: [Desarrollo de dependencias de SDOS](https://kc.sdos.es/x/zgFm).
+## Dependencias
 
+SDOSKeyedCodable no tiene dependencias.
 
 ## Referencias
+
 * [Codable](https://developer.apple.com/documentation/swift/codable)
 * [KeyedCodable](https://github.com/dgrzeszczak/KeyedCodable)
 * https://svrgitpub.sdos.es/iOS/SDOSKeyedCodable
+
+
+Esta documentación ha sido publicada a partir del fichero README.md de la librería. **No editar**
