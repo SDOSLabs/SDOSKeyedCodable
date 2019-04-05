@@ -1,3 +1,15 @@
+- [SDOSKeyedCodable](#sdoskeyedcodable)
+    - [Introducción](#introducción)
+    - [Instalación](#instalación)
+        - [Cocoapods](#cocoapods)
+    - [La librería](#la-librería)
+        - [Qué hay en SDOSKeyedCodable](#qué-hay-en-sdoskeyedcodable)
+        - [Cómo usar SDOSKeyedCodable](#cómo-usar-sdoskeyedcodable)
+        - [Ejemplos de uso de SDOSKeyedCodable](#ejemplos-de-uso-de-sdoskeyedcodable)
+    - [Proyecto de ejemplo](#proyecto-de-ejemplo)
+    - [Dependencias](#dependencias)
+    - [Referencias](#referencias)
+
 # SDOSKeyedCodable
 
 - Para consultar los últimos cambios en la librería consultar el [CHANGELOG.md](https://svrgitpub.sdos.es/iOS/SDOSKeyedCodable/blob/master/CHANGELOG.md).
@@ -96,10 +108,10 @@ Por lo general, SDOSKeyedCodable intervendrá al declarar los DTOs que se usará
 
 * Para usar la librería, es imprescindible declarar que el DTO implementa el protocolo `Keyedable`.
 * Se debe implementar la función `map(map: )` del protocolo `Keyedable`.
-* En la implementación de la función `map(map: )` se deben usar los operadores:
+* En la implementación de la función `map(map: )` se pueden usar los operadores:
     * `<<-`  En caso de que el DTO solo se use para decodificar (*decode*).
     * `->>`  Cuando el DTO solo se use para ser codificado (*encode*).
-    * `<->`  Cuando el DTO se use tanto para decodificar como para codificar. 
+    * `<->`  Cuando el DTO se use tanto para decodificar como para codificar. **Usaremos este operador** para evitar posibles errores.
 * En la implementación de `init(from: )` del protocolo `Decodable`, es imprescindible usar el `KeyedDecoder` proporcionado por SDOSKeyedCodable.
     * Puesto que en la implementación de `init(from: )` no se van a setear, a priori, las propiedades del DTO, es necesario que sus propiedades cumplan una de las siguientes condiciones:
         1. Sean opcionales (ya sean opcionales `?` (**recomendado**) o *implicitly unwrapped optionals* `!` (**no recomendado**).
@@ -119,9 +131,9 @@ struct UserDTO: Decodable, Keyedable {
     var email: String?
     
     mutating func map(map: KeyMap) throws {
-        try id       <<- map["id"]
-        try name     <<- map["datos.nombre"]
-        try location <<- map["datos.email"]
+        try id       <-> map["id"]
+        try name     <-> map["datos.nombre"]
+        try location <-> map["datos.email"]
     }
     
     init(from decoder: Decoder) throws {
@@ -167,8 +179,8 @@ struct ShopDTO: Decodable, Keyedable {
     var location: Location?
     
     mutating func map(map: KeyMap) throws {
-        try name     <<- map["shop_name"]
-        try location <<- map[""]
+        try name     <-> map["shop_name"]
+        try location <-> map[""]
     }
     
     init(from decoder: Decoder) throws {
@@ -216,7 +228,7 @@ struct PaymentMethods: Decodable, Keyedable {
             
             allKeys.forEach {
                 var paymentMethod: PaymentMethodDTO?
-                try? paymentMethod <<- map[$0]
+                try? paymentMethod <-> map[$0]
                 if let paymentMethod = paymentMethod {
                     userPaymentMethods.append(paymentMethod)
             }
@@ -274,7 +286,7 @@ struct OptionalArray: Decodable, Keyedable {
     private(set) var array: [SimpleElementDTO]!
     
     mutating func map(map: KeyMap) throws {
-        try array <<- map["* elements"]
+        try array <-> map["* elements"]
     }
     
     init(from decoder: Decoder) throws {
@@ -341,12 +353,12 @@ struct KeyOptionsExampleDTO: Codable, Keyedable {
     private(set) var array1: [SimpleElementDTO]!
     
     mutating func map(map: KeyMap) throws {
-        try name <<- map["* name"]
-        try greeting <<- map["+.greeting", KeyOptions(delimiter: "+", flat: nil)]
-        try description <<- map[".details.description", KeyOptions(flat: nil)]
-        try location <<- map["", KeyOptions(flat: "__")]
-        try array <<- map["* array"]
-        try array1 <<- map["### * array1", KeyOptions(optionalArrayElements: "### ")]
+        try name <-> map["* name"]
+        try greeting <-> map["+.greeting", KeyOptions(delimiter: "+", flat: nil)]
+        try description <-> map[".details.description", KeyOptions(flat: nil)]
+        try location <-> map["", KeyOptions(flat: "__")]
+        try array <-> map["* array"]
+        try array1 <-> map["### * array1", KeyOptions(optionalArrayElements: "### ")]
     }
     
     init(from decoder: Decoder) throws {
@@ -376,6 +388,3 @@ SDOSKeyedCodable no tiene dependencias.
 * [Codable](https://developer.apple.com/documentation/swift/codable)
 * [KeyedCodable](https://github.com/dgrzeszczak/KeyedCodable)
 * https://svrgitpub.sdos.es/iOS/SDOSKeyedCodable
-
-
-Esta documentación ha sido publicada a partir del fichero README.md de la librería. **No editar**
