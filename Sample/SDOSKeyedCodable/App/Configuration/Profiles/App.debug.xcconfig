@@ -7,11 +7,11 @@
 //
 #include "Shared.xcconfig"
 
-//Paquete
+// Paquete
 PRODUCT_PACKAGE_NAME = $(BASE_PRODUCT_PACKAGE_NAME).dev
 
-//Vesión
-VERSION_NUMBER = 1.0.0
+// Versión
+VERSION_NUMBER = 1.0.1
 BUILD_NUMBER = 1
 
 APP_ICON_ASSETS = Debug
