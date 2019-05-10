@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kdy-0m-z8q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kdy-0m-z8q">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!--Example List View Controller-->
         <scene sceneID="WJ4-ks-0d9">
             <objects>
-                <viewController id="jub-Yc-3Df" customClass="ExampleListViewController" customModule="SDOSKeyedCodable_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jub-Yc-3Df" customClass="ExampleListViewController" customModule="SDOSKeyedCodableSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OfZ-Q6-T6k"/>
                         <viewControllerLayoutGuide type="bottom" id="3RX-22-yEf"/>
@@ -54,7 +54,7 @@
         <!--Example Detail View Controller-->
         <scene sceneID="waa-1X-7av">
             <objects>
-                <viewController id="dGg-wc-gDJ" customClass="ExampleDetailViewController" customModule="SDOSKeyedCodable_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dGg-wc-gDJ" customClass="ExampleDetailViewController" customModule="SDOSKeyedCodableSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ssw-DP-NCh"/>
                         <viewControllerLayoutGuide type="bottom" id="VPe-4G-sp1"/>
@@ -87,7 +87,7 @@
         <!--Initial View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="InitialViewController" customModule="SDOSKeyedCodable_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="InitialViewController" customModule="SDOSKeyedCodableSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -124,7 +124,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="actionSeeExample:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Qfy-Yp-cfG"/>
-                                                    <segue destination="oJh-sE-Ta6" kind="presentation" id="jiR-Si-FH2"/>
+                                                    <segue destination="oJh-sE-Ta6" kind="presentation" identifier="SegueSeeExample" id="jiR-Si-FH2"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7U-cN-Nzx">

@@ -121,6 +121,10 @@ class InitialViewController: UIViewController {
         updateBackForwardButtons()
     }
     
+    @IBAction func actionSeeExample(_ sender: Any) {
+        performSegue(withIdentifier: "SegueSeeExample", sender: self)
+    }
+    
 }
 
 extension InitialViewController: WKNavigationDelegate {
