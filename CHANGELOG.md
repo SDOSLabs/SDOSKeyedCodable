@@ -1,6 +1,8 @@
 ## [Head]
 
 - Corregido crash en proyecto de ejemplo al pulsar el botón de "Ver ejemplo"
+- Actualizada librería y proyecto de ejemplo a Swift 5
+- Añadida la posibilidad de parsear a booleano desde un string o un entero
 
 ## [1.0.1 Nuevo Readme](http://svrgitpub.sdos.es/ios/SDOSKeyedCodable/tree/v1.0.1)
 
