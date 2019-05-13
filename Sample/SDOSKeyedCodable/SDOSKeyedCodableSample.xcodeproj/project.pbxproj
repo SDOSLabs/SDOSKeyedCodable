@@ -29,6 +29,8 @@
 		5CBF458F221558DE001152B6 /* flatJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CBF458E221558DE001152B6 /* flatJSON.txt */; };
 		5CBF459222155C16001152B6 /* ShopDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF459122155C16001152B6 /* ShopDTO.swift */; };
 		5CBF4594221562E3001152B6 /* ExampleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF4593221562E3001152B6 /* ExampleDetailViewController.swift */; };
+		5CC4DDDE228971360044044A /* BoolSpecialCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4DDDD22896EE00044044A /* BoolSpecialCase.swift */; };
+		5CC4DDDF2289745A0044044A /* boolSpecialCase.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CC4DDDC22896ECA0044044A /* boolSpecialCase.txt */; };
 		771B0C56DF7004F31F80E782 /* libPods-SDOSKeyedCodableSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5660432DFFFA437B81E8FFC /* libPods-SDOSKeyedCodableSample.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		5CBF458E221558DE001152B6 /* flatJSON.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flatJSON.txt; sourceTree = "<group>"; };
 		5CBF459122155C16001152B6 /* ShopDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDTO.swift; sourceTree = "<group>"; };
 		5CBF4593221562E3001152B6 /* ExampleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleDetailViewController.swift; sourceTree = "<group>"; };
+		5CC4DDDC22896ECA0044044A /* boolSpecialCase.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = boolSpecialCase.txt; sourceTree = "<group>"; };
+		5CC4DDDD22896EE00044044A /* BoolSpecialCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolSpecialCase.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SDOSKeyedCodableSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDOSKeyedCodableSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6734D7DA6BB307ABC1603501 /* Pods-SDOSKeyedCodableSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSKeyedCodableSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDOSKeyedCodableSample/Pods-SDOSKeyedCodableSample.debug.xcconfig"; sourceTree = "<group>"; };
 		A5660432DFFFA437B81E8FFC /* libPods-SDOSKeyedCodableSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDOSKeyedCodableSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				5C380320221577A7004F1AE2 /* ExampleProtocol.swift */,
+				5CC4DDDB22896E9F0044044A /* BoolSpecialCase */,
 				5CBF459022155BD2001152B6 /* FlatJSON */,
 				5CA9C9622215BD69003EF197 /* AllKeys */,
 				5C2E189C22169C0700D1D08E /* OptionalArrayElements */,
@@ -238,6 +243,15 @@
 				5CBF459122155C16001152B6 /* ShopDTO.swift */,
 			);
 			path = FlatJSON;
+			sourceTree = "<group>";
+		};
+		5CC4DDDB22896E9F0044044A /* BoolSpecialCase */ = {
+			isa = PBXGroup;
+			children = (
+				5CC4DDDC22896ECA0044044A /* boolSpecialCase.txt */,
+				5CC4DDDD22896EE00044044A /* BoolSpecialCase.swift */,
+			);
+			path = BoolSpecialCase;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -331,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CC4DDDF2289745A0044044A /* boolSpecialCase.txt in Resources */,
 				5C80690622140F8A00FFACC3 /* AppIcon.xcassets in Resources */,
 				5CBF458F221558DE001152B6 /* flatJSON.txt in Resources */,
 				5C80690D221421EF00FFACC3 /* Localizable.strings in Resources */,
@@ -396,6 +411,7 @@
 			files = (
 				5CBF4594221562E3001152B6 /* ExampleDetailViewController.swift in Sources */,
 				5C38031F22157605004F1AE2 /* IndentedObject.swift in Sources */,
+				5CC4DDDE228971360044044A /* BoolSpecialCase.swift in Sources */,
 				5C8068F6221408A400FFACC3 /* AppDelegate.swift in Sources */,
 				5CBF458C221554FB001152B6 /* ExampleModel.swift in Sources */,
 				5CBF4589221553FB001152B6 /* ExampleListViewController.swift in Sources */,

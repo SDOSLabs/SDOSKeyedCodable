@@ -48,7 +48,12 @@ private final class DecoderKeyMap: KeyMapBase {
             try object = V(from: decoder)
         } else {
             let result = try keyedDecodingContainer(for: keyCode, options: options)
-            let val = try result.container.decode(V.self, forKey: result.key)
+            let val: V
+            if let _val: V = decodeSpecialCase(type: V.self, container: result.container, key: result.key) {
+                val = _val
+            } else {
+                val = try result.container.decode(V.self, forKey: result.key)
+            }
             object = val
         }
     }
@@ -58,7 +63,12 @@ private final class DecoderKeyMap: KeyMapBase {
             try? object = V(from: decoder)
         } else {
             let result = try keyedDecodingContainer(for: keyCode, options: options)
-            let val = try result.container.decodeIfPresent(V.self, forKey: result.key)
+            let val: V?
+            if let _val = decodeSpecialCase(type: V.self, container: result.container, key: result.key) {
+                val = _val
+            } else {
+                val = try result.container.decodeIfPresent(V.self, forKey: result.key)
+            }
             object = val
         }
     }
@@ -158,4 +168,50 @@ extension DecoderKeyMap: KeysCollection {
             }
         }
     }
+}
+
+// MARK: - Decoding special cases
+// This extension defines methods to decode a boolean when the value from the JSON is either a string ("true", "1", "yes" or "false", "0", "no") or a integer (1 or 0).
+
+private extension DecoderKeyMap {
+    
+    private static let acceptedTrueAsString: [String] = ["TRUE", "1", "YES"]
+    private static let acceptedFalseAsString: [String] = ["FALSE", "0", "NO"]
+    private static let acceptedTrueAsInt: [Int] = [1]
+    private static let acceptedFalseAsInt: [Int] = [0]
+
+    func decodeSpecialCase<V: Decodable>(type: V.Type, container: KeyedDecodingContainer<Key>, key: Key) -> V? {
+        switch type {
+        case is Bool.Type:
+            return decodeSpecialCaseForBool(container: container, key: key) as? V
+        default:
+            return nil
+        }
+    }
+
+    func decodeSpecialCaseForBool(container: KeyedDecodingContainer<Key>, key: Key) -> Bool? {
+        if let str = try? container.decodeIfPresent(String.self, forKey: key) {
+            let strUppercased = str.uppercased()
+            switch strUppercased {
+            case _ where DecoderKeyMap.acceptedTrueAsString.contains(strUppercased):
+                return true
+            case _ where DecoderKeyMap.acceptedFalseAsString.contains(strUppercased):
+                return false
+            default:
+                return nil
+            }
+        } else if let int = try? container.decodeIfPresent(Int.self, forKey: key) {
+            switch int {
+            case _ where DecoderKeyMap.acceptedTrueAsInt.contains(int):
+                return true
+            case _ where DecoderKeyMap.acceptedFalseAsInt.contains(int):
+                return false
+            default:
+                return nil
+            }
+        } else {
+            return nil
+        }
+    }
+
 }

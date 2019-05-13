@@ -16,6 +16,10 @@
 "SDOSKeyedCodableExample.type.section.mapImplementation" = "Propiedades y mapping";
 "SDOSKeyedCodableExample.type.section.decodedObject" = "Objeto parseado";
 
+// Bool special case
+"SDOSKeyedCodableExample.type.boolSpecialCase.name" = "Bool Special Case";
+"SDOSKeyedCodableExample.type.boolSpecialCase.description" = "Permite parsear como bool los valores \"true\", \"false\", \"yes\", \"no\", \"1\", \"0\", 1 ó 0";
+"SDOSKeyedCodableExample.type.boolSpecialCase.detailedDescription" = "En los JSON de los servicios web, hay ocasiones en las que un dato de tipo Bool viene dado por un String o por un número. Con esta librería se podrá parsear esos casos \"especiales\" directamente a una propiedad de tipo Bool. Concretamente:\n\nSe podrá parsear a booleano si el valor es uno de los siguientes strings (case insensitive): \"true\", \"false\", \"1\" ó \"0\".\n\nSe podrá parsear a booleano si el valor es el entero 1 ó el entero 0.";
 
 // Flat json
 "SDOSKeyedCodableExample.type.flat.name" = "Flat json";

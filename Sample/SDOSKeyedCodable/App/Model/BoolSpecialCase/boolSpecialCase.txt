@@ -1,0 +1,10 @@
+{
+    "stringTrue" : "true",
+    "stringFalse" : "False",
+    "stringYes": "YES",
+    "stringNo" : "no",
+    "string0" : "0",
+    "string1" : "1",
+    "int1" : 1,
+    "int0" : 0
+}

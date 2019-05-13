@@ -9,11 +9,13 @@
 import Foundation
 
 enum ExampleType: CaseIterable {
-    case flatJSON, allKeys, optionalArrayElements, keyOptions
+    case boolSpecialCase, flatJSON, allKeys, optionalArrayElements, keyOptions
     
     func getJSON() -> String? {
         let resourceName: String
         switch self {
+        case .boolSpecialCase:
+            resourceName = "boolSpecialCase"
         case .flatJSON:
             resourceName = "flatJSON"
         case .allKeys:
@@ -38,6 +40,8 @@ enum ExampleType: CaseIterable {
         
         do {
             switch self {
+            case .boolSpecialCase:
+                obj = try JSONDecoder().decode(BoolSpecialCase.self, from: jsonData)
             case .flatJSON:
                 obj = try JSONDecoder().decode(ShopDTO.self, from: jsonData)
             case .allKeys:
@@ -56,6 +60,8 @@ enum ExampleType: CaseIterable {
     
     func getImplementation() -> String? {
         switch self {
+        case .boolSpecialCase:
+            return BoolSpecialCase.implementation
         case .flatJSON:
             return ShopDTO.implementation
         case .allKeys:
@@ -69,6 +75,8 @@ enum ExampleType: CaseIterable {
     
     func getTypeName() -> String? {
         switch self {
+        case .boolSpecialCase:
+            return String(describing: BoolSpecialCase.self)
         case .flatJSON:
             return String(describing: ShopDTO.self)
         case .allKeys:
@@ -90,6 +98,10 @@ struct Example {
     init(type: ExampleType) {
         self.type = type
         switch type {
+        case .boolSpecialCase:
+            title = NSLocalizedString("SDOSKeyedCodableExample.type.boolSpecialCase.name", comment: "")
+            description = NSLocalizedString("SDOSKeyedCodableExample.type.boolSpecialCase.description", comment: "")
+            detailedDescription = NSLocalizedString("SDOSKeyedCodableExample.type.boolSpecialCase.detailedDescription", comment: "")
         case .flatJSON:
             title = NSLocalizedString("SDOSKeyedCodableExample.type.flat.name", comment: "")
             description = NSLocalizedString("SDOSKeyedCodableExample.type.flat.description", comment: "")
