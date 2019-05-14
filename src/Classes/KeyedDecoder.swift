@@ -30,6 +30,7 @@ private final class DecoderKeyMap: KeyMapBase {
     private let startingCodePath: [CodingKey]
     private let container: KeyedDecodingContainer<Key>
     private var containerDictionary: [String: KeyedDecodingContainer<Key>] = [:]
+    private var unkeyedContainerDictionary: [String: UnkeyedDecodingContainer] = [:]
     private let decoder: Decoder
 
     init(with decoder: Decoder) throws {
@@ -128,9 +129,24 @@ private final class DecoderKeyMap: KeyMapBase {
         var codingPath = startingCodePath
         // initialize containers
         while keys.count != 1 {
-            codingPath.append(keys[0])
-            keys.remove(at: 0)
-            _ = try keyedDecodingContainer(for: codingPath)
+            let key = keys.remove(at: 0)
+            codingPath.append(key)
+            if let arrayMappingIndicator = options.arrayMappingIndicator,  key.stringValue == arrayMappingIndicator {
+                //TODO: Throw if keys.isEmpty at this point since an array mapping indicator "[]" cannot be the last component of the keyCode path
+                try cacheUnkeyedDecodingContainer(for: codingPath)
+            } else if
+                let nextKey = keys.first,
+                let arrayMappingIndicator = options.arrayMappingIndicator,
+             nextKey.stringValue == arrayMappingIndicator
+                {
+                    keys.remove(at: 0) // We now know we should decode an array
+                    // We do not add the nextKey.
+                    // codingPath.append(nextKey)
+                    // In this case, it is only used to indicate that the `key` references an array. If we had an array inside an array (and so on) then we would use the arrayMappingIndicator key and would append it to the codingPath (to differentiate between the different levels of arrays)
+                    try cacheUnkeyedDecodingContainer(for: codingPath)
+            } else {
+                _ = try keyedDecodingContainer(for: codingPath)
+            }
         }
 
         return (try keyedDecodingContainer(for: codingPath), keys[0])
@@ -141,18 +157,48 @@ private final class DecoderKeyMap: KeyMapBase {
         if let cached = containerDictionary[codePathString] {
             return cached
         }
-
-        let parentCodePathString = codingPath.dropLast().codePathString
-        guard let parent = containerDictionary[parentCodePathString] else {
-            fatalError("KeyedDecoder - no parent container")
-        }
+        
         guard let lastKey = codingPath[codingPath.count - 1] as? Key else {
             fatalError("KeyedDecoder - invalid key")
         }
 
-        let container = try parent.nestedContainer(keyedBy: Key.self, forKey: lastKey)
-        containerDictionary[codePathString] = container
-        return container
+        let parentCodePathString = codingPath.dropLast().codePathString
+        
+        if let parent = containerDictionary[parentCodePathString] {
+            let container = try parent.nestedContainer(keyedBy: Key.self, forKey: lastKey)
+            containerDictionary[codePathString] = container
+            return container
+        } else if var parent = unkeyedContainerDictionary[parentCodePathString] {
+            let container = try parent.nestedContainer(keyedBy: Key.self)
+            containerDictionary[codePathString] = container
+            return container
+        } else {
+            fatalError("KeyedDecoder - no parent container")
+        }
+    }
+    
+    private func cacheUnkeyedDecodingContainer(for codingPath: [CodingKey]) throws {
+        let codePathString = codingPath.codePathString
+        if let cached = unkeyedContainerDictionary[codePathString] {
+            return
+        }
+        
+        guard let lastKey = codingPath[codingPath.count - 1] as? Key else {
+            fatalError("KeyedDecoder - invalid key")
+        }
+        
+        let parentCodePathString = codingPath.dropLast().codePathString
+        var container: UnkeyedDecodingContainer? = nil
+        if let parent = containerDictionary[parentCodePathString] {
+            container = try parent.nestedUnkeyedContainer(forKey: lastKey)
+        } else if var parent = unkeyedContainerDictionary[codePathString] {
+            container = try parent.nestedUnkeyedContainer()
+        }
+        
+        guard let unkeyedContainer = container else {
+            fatalError("KeyedDecoder - no parent container")
+        }
+        unkeyedContainerDictionary[codePathString] = unkeyedContainer
     }
 }
 
