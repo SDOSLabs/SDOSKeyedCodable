@@ -76,17 +76,20 @@ private final class DecoderKeyMap: KeyMapBase {
     }
 
     func decode<V>(object: inout [V], with keyCode: CodingKey, options: KeyOptions) throws where V: Decodable {
-        if let arrayMapping = options.arrayMappingIndicator,
+        if let arrayMapping = options.arrayMapping,
             !arrayMapping.isEmpty,
             keyCode.stringValue.starts(with: arrayMapping) {
-            let resultArray = try keyedDecodingContainerList(for: keyCode, options: options)
+            // array mapping
+            let key = Key(stringValue: String(keyCode.stringValue.dropFirst(arrayMapping.count)))
+            let resultArray = try keyedDecodingContainerList(for: key, options: options)
+            
             let val = try resultArray.containerList.flatMap { (container: KeyedDecodingContainer<Key>) -> [V] in
                 if let _ = try? container.nestedUnkeyedContainer(forKey: resultArray.key) {
                     // This means that the key contains an array (presumably of V)
                     return try container.decode([V].self, forKey: resultArray.key)
                 } else {
                     // This means that the key contains a dictionary (presumably decodable by V)
-                    return [try container.decode(V.self, forKey: resultArray.key)]
+                    return try [container.decode(V.self, forKey: resultArray.key)]
                 }
             }
             object = val
@@ -115,27 +118,52 @@ private final class DecoderKeyMap: KeyMapBase {
     }
 
     func decode<V>(object: inout [V]?, with keyCode: CodingKey, options: KeyOptions) throws where V: Decodable {
-        let result = try keyedDecodingContainer(for: keyCode, options: options)
-        if  let optionalArrayElements = options.optionalArrayElements,
-            !optionalArrayElements.isEmpty,
-            result.key.stringValue.starts(with: optionalArrayElements) {
-            let key = Key(stringValue: String(result.key.stringValue.dropFirst(optionalArrayElements.count))) // "optional" array
-
-            var unkeyedContainer = try result.container.nestedUnkeyedContainer(forKey: key)
-            var newObject = [V]()
-            while !unkeyedContainer.isAtEnd {
-                if let route = try? unkeyedContainer.decode(V.self) {
-                    newObject.append(route)
+        if let arrayMapping = options.arrayMapping,
+            !arrayMapping.isEmpty,
+            keyCode.stringValue.starts(with: arrayMapping) {
+            // array mapping
+            let key = Key(stringValue: String(keyCode.stringValue.dropFirst(arrayMapping.count)))
+            let resultArray = try keyedDecodingContainerList(for: key, options: options)
+            
+            let val = try resultArray.containerList.flatMap { (container: KeyedDecodingContainer<Key>) -> [V] in
+                if let _ = try? container.nestedUnkeyedContainer(forKey: resultArray.key) {
+                    // This means that the key contains an array (presumably of V)
+                    return try container.decodeIfPresent([V].self, forKey: resultArray.key) ?? []
                 } else {
-                    _ = try? unkeyedContainer.decode(EmptyCodable.self)
+                    // This means that the key contains a dictionary (presumably decodable by V)
+                    if let decoded = try container.decodeIfPresent(V.self, forKey: resultArray.key) {
+                        return [decoded]
+                    } else {
+                        return []
+                    }
                 }
             }
-            object = newObject
-        } else {
-            let val = try result.container.decodeIfPresent([V].self, forKey: result.key)
             object = val
+        } else {
+            let result = try keyedDecodingContainer(for: keyCode, options: options)
+            if  let optionalArrayElements = options.optionalArrayElements,
+                !optionalArrayElements.isEmpty,
+                result.key.stringValue.starts(with: optionalArrayElements) {
+                let key = Key(stringValue: String(result.key.stringValue.dropFirst(optionalArrayElements.count))) // "optional" array
+                
+                var unkeyedContainer = try result.container.nestedUnkeyedContainer(forKey: key)
+                var newObject = [V]()
+                while !unkeyedContainer.isAtEnd {
+                    if let route = try? unkeyedContainer.decode(V.self) {
+                        newObject.append(route)
+                    } else {
+                        _ = try? unkeyedContainer.decode(EmptyCodable.self)
+                    }
+                }
+                object = newObject
+            } else {
+                let val = try result.container.decodeIfPresent([V].self, forKey: result.key)
+                object = val
+            }
         }
     }
+    
+    // MARK: - Normal decoding
 
     private func keyedDecodingContainer(for keyCode: CodingKey, options: KeyOptions) throws -> (container: KeyedDecodingContainer<Key>, key: Key) {
         var keys = keyCode.keys(for: options)
@@ -146,63 +174,10 @@ private final class DecoderKeyMap: KeyMapBase {
         while keys.count != 1 {
             let key = keys.remove(at: 0)
             codingPath.append(key)
-            if let arrayMappingIndicator = options.arrayMappingIndicator, key.stringValue == arrayMappingIndicator {
-                //TODO: Throw if keys.isEmpty at this point since an array mapping indicator "[]" cannot be the last component of the keyCode path
-                try cacheDecodingContainerList(for: codingPath)
-            } else if
-                let nextKey = keys.first,
-                let arrayMappingIndicator = options.arrayMappingIndicator,
-             nextKey.stringValue == arrayMappingIndicator
-                {
-                    keys.remove(at: 0) // We now know we should decode an array
-                    // We do not add the nextKey.
-                    // codingPath.append(nextKey)
-                    // In this case, it is only used to indicate that the `key` references an array. If we had an array inside an array (and so on) then we would use the arrayMappingIndicator key and would append it to the codingPath (to differentiate between the different levels of arrays)
-                    try cacheDecodingContainerList(for: codingPath)
-            } else {
-                _ = try keyedDecodingContainer(for: codingPath)
-            }
+            _ = try keyedDecodingContainer(for: codingPath)
         }
 
         return (try keyedDecodingContainer(for: codingPath), keys[0])
-    }
-    
-    
-    private func keyedDecodingContainerList(for keyCode: CodingKey, options: KeyOptions) throws -> (containerList: [KeyedDecodingContainer<Key>], key: Key) {
-        var keys = keyCode.keys(for: options)
-        guard !keys.isEmpty else { fatalError("encode failed - no key") }
-        
-        var codingPath = startingCodePath
-        
-        while keys.count != 1 {
-            let key = keys.remove(at: 0)
-            codingPath.append(key)
-            _ = try keyedDecodingContainerList(for: codingPath)
-        }
-        
-        return (try keyedDecodingContainerList(for: codingPath), keys[0])
-    }
-    
-    private func keyedDecodingContainerList(for codingPath: [CodingKey]) throws -> [KeyedDecodingContainer<Key>] {
-        let codePathString = codingPath.codePathString
-        if let cached = containerListDictionary[codePathString] {
-            return cached
-        }
-        
-        guard let lastKey = codingPath[codingPath.count - 1] as? Key else {
-            fatalError("KeyedDecoder - invalid key")
-        }
-        
-        let parentCodePathString = codingPath.dropLast().codePathString
-        if let parentList = containerListDictionary[parentCodePathString] {
-            let containerList = try parentList.flatMap { (parent: KeyedDecodingContainer<Key>) -> [KeyedDecodingContainer<Key>] in
-                return try self.getContainerList(from: parent, forKey: lastKey)
-            }
-            containerListDictionary[codePathString] = containerList
-            return containerList
-        } else {
-            fatalError("KeyedDecoder - no parent container")
-        }
     }
 
     private func keyedDecodingContainer(for codingPath: [CodingKey]) throws -> KeyedDecodingContainer<Key> {
@@ -243,6 +218,45 @@ private final class DecoderKeyMap: KeyMapBase {
         }
     }
     
+    // MARK: - Array mapping
+    
+    private func keyedDecodingContainerList(for keyCode: CodingKey, options: KeyOptions) throws -> (containerList: [KeyedDecodingContainer<Key>], key: Key) {
+        var keys = keyCode.keys(for: options)
+        guard !keys.isEmpty else { fatalError("encode failed - no key") }
+        
+        var codingPath = startingCodePath
+        
+        while keys.count != 1 {
+            let key = keys.remove(at: 0)
+            codingPath.append(key)
+            _ = try keyedDecodingContainerList(for: codingPath)
+        }
+        
+        return (try keyedDecodingContainerList(for: codingPath), keys[0])
+    }
+    
+    private func keyedDecodingContainerList(for codingPath: [CodingKey]) throws -> [KeyedDecodingContainer<Key>] {
+        let codePathString = codingPath.codePathString
+        if let cached = containerListDictionary[codePathString] {
+            return cached
+        }
+        
+        guard let lastKey = codingPath[codingPath.count - 1] as? Key else {
+            fatalError("KeyedDecoder - invalid key")
+        }
+        
+        let parentCodePathString = codingPath.dropLast().codePathString
+        if let parentList = containerListDictionary[parentCodePathString] {
+            let containerList = try parentList.flatMap { (parent: KeyedDecodingContainer<Key>) -> [KeyedDecodingContainer<Key>] in
+                return try self.getContainerList(from: parent, forKey: lastKey)
+            }
+            containerListDictionary[codePathString] = containerList
+            return containerList
+        } else {
+            fatalError("KeyedDecoder - no parent container")
+        }
+    }
+    
     private func getContainerList(fromUnkeyedParent parent: UnkeyedDecodingContainer) throws -> [KeyedDecodingContainer<Key>] {
         var keyedDecodingContainerList = [KeyedDecodingContainer<Key>]()
         var unkeyedDecodingContainerList = [UnkeyedDecodingContainer]()
@@ -265,36 +279,6 @@ private final class DecoderKeyMap: KeyMapBase {
         }
     }
     
-    private func cacheDecodingContainerList(for codingPath: [CodingKey]) throws {
-        let codePathString = codingPath.codePathString
-        if let cached = containerListDictionary[codePathString] {
-            return
-        }
-        
-        guard let lastKey = codingPath[codingPath.count - 1] as? Key else {
-            fatalError("KeyedDecoder - invalid key")
-        }
-        
-        let parentCodePathString = codingPath.dropLast().codePathString
-        var unkeyedContainerList = [UnkeyedDecodingContainer]()
-        
-        if let parent = containerDictionary[parentCodePathString] {
-            unkeyedContainerList = [try parent.nestedUnkeyedContainer(forKey: lastKey)]
-        } else if var parentList = containerListDictionary[codePathString] {
-            unkeyedContainerList = try parentList.map { (parent: KeyedDecodingContainer<Key>) -> UnkeyedDecodingContainer in
-                try parent.nestedUnkeyedContainer(forKey: lastKey)
-            }
-        } else {
-            fatalError("KeyedDecoder - no parent container")
-        }
-        
-//        let containerList = try unkeyedContainerList.flatMap({ (parent: UnkeyedDecodingContainer) -> [KeyedDecodingContainer<Key>] in
-//            parent.neste
-//        })
-//        //        var containerList = [KeyedDecodingContainer<Key>]()
-//
-//        containerListDictionary[codePathString] = containerList
-    }
 }
 
 extension DecoderKeyMap: KeysCollection {

@@ -12,10 +12,10 @@ import SDOSKeyedCodable
 struct CountryNames: Decodable, Keyedable {
     
     var name: String?
-    var citizenNames = [String]()
+    var citizenNames: [String]? = [String]()
     
     mutating func map(map: KeyMap) throws {
-        try name <<- map["name"]
+        try name <<- map["country.name"]
         try citizenNames <<- map["[]country.cities.citizens.name"]
     }
     
@@ -33,8 +33,8 @@ extension CountryNames: ExampleProtocol {
         var citizenNames = [String]()
         
         mutating func map(map: KeyMap) throws {
-            try name <<- map["name"]
-            try citizenNames <<- map["country.cities.[].citizens.[].name"]
+            try name <<- map["country.name"]
+            try citizenNames <<- map["[]country.cities.citizens.name"]
         }
         """
     }
