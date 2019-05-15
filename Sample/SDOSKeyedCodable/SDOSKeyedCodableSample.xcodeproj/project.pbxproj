@@ -24,6 +24,8 @@
 		5C80690D221421EF00FFACC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C80690F221421EF00FFACC3 /* Localizable.strings */; };
 		5CA9C9642215BD7D003EF197 /* allKeys.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CA9C9632215BD70003EF197 /* allKeys.txt */; };
 		5CA9C9662215BE39003EF197 /* PaymentMethodDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9C9652215BE39003EF197 /* PaymentMethodDTO.swift */; };
+		5CB99C98228BE20400E829F6 /* arrayMapping.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CB99C97228BE20300E829F6 /* arrayMapping.txt */; };
+		5CB99C9A228BE21900E829F6 /* CountryNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB99C99228BE21900E829F6 /* CountryNames.swift */; };
 		5CBF4589221553FB001152B6 /* ExampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF4588221553FB001152B6 /* ExampleListViewController.swift */; };
 		5CBF458C221554FB001152B6 /* ExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF458B221554FB001152B6 /* ExampleModel.swift */; };
 		5CBF458F221558DE001152B6 /* flatJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CBF458E221558DE001152B6 /* flatJSON.txt */; };
@@ -56,6 +58,8 @@
 		5C80690E221421EF00FFACC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5CA9C9632215BD70003EF197 /* allKeys.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = allKeys.txt; sourceTree = "<group>"; };
 		5CA9C9652215BE39003EF197 /* PaymentMethodDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodDTO.swift; sourceTree = "<group>"; };
+		5CB99C97228BE20300E829F6 /* arrayMapping.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = arrayMapping.txt; sourceTree = "<group>"; };
+		5CB99C99228BE21900E829F6 /* CountryNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryNames.swift; sourceTree = "<group>"; };
 		5CBF4588221553FB001152B6 /* ExampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListViewController.swift; sourceTree = "<group>"; };
 		5CBF458B221554FB001152B6 /* ExampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleModel.swift; sourceTree = "<group>"; };
 		5CBF458E221558DE001152B6 /* flatJSON.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flatJSON.txt; sourceTree = "<group>"; };
@@ -222,10 +226,20 @@
 			path = AllKeys;
 			sourceTree = "<group>";
 		};
+		5CB99C96228BE20300E829F6 /* ArrayMapping */ = {
+			isa = PBXGroup;
+			children = (
+				5CB99C97228BE20300E829F6 /* arrayMapping.txt */,
+				5CB99C99228BE21900E829F6 /* CountryNames.swift */,
+			);
+			path = ArrayMapping;
+			sourceTree = "<group>";
+		};
 		5CBF458A221554D5001152B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				5C380320221577A7004F1AE2 /* ExampleProtocol.swift */,
+				5CB99C96228BE20300E829F6 /* ArrayMapping */,
 				5CC4DDDB22896E9F0044044A /* BoolSpecialCase */,
 				5CBF459022155BD2001152B6 /* FlatJSON */,
 				5CA9C9622215BD69003EF197 /* AllKeys */,
@@ -350,6 +364,7 @@
 				5CBF458F221558DE001152B6 /* flatJSON.txt in Resources */,
 				5C80690D221421EF00FFACC3 /* Localizable.strings in Resources */,
 				5C8068F5221408A400FFACC3 /* Images.xcassets in Resources */,
+				5CB99C98228BE20400E829F6 /* arrayMapping.txt in Resources */,
 				5C8068F3221408A400FFACC3 /* LaunchScreen.xib in Resources */,
 				5C8068F4221408A400FFACC3 /* Main.storyboard in Resources */,
 				5C2E18A02216ADB100D1D08E /* optionalArrayElements.txt in Resources */,
@@ -420,6 +435,7 @@
 				5C8068F2221408A400FFACC3 /* InitialViewController.swift in Sources */,
 				5C806909221420C100FFACC3 /* Constants.swift in Sources */,
 				5C2E18A52216BE0C00D1D08E /* KeyOptionsExampleDTO.swift in Sources */,
+				5CB99C9A228BE21900E829F6 /* CountryNames.swift in Sources */,
 				5CA9C9662215BE39003EF197 /* PaymentMethodDTO.swift in Sources */,
 				5C2E189F22169FF700D1D08E /* SimpleElementDTO.swift in Sources */,
 			);

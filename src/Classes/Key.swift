@@ -21,3 +21,13 @@ public struct Key: CodingKey {
         self.intValue = intValue
     }
 }
+
+extension CodingKey {
+    
+    func keys(for options: KeyOptions) -> [Key] {
+        return stringValue
+            .components(separatedBy: options.delimiter ?? "")
+            .compactMap { Key(stringValue: $0) }
+    }
+    
+}
