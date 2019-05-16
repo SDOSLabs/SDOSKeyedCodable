@@ -123,7 +123,7 @@ private final class DecoderKeyMap: KeyMapBase {
             keyCode.stringValue.starts(with: arrayMapping) {
             // array mapping
             let key = Key(stringValue: String(keyCode.stringValue.dropFirst(arrayMapping.count)))
-            let resultArray = try keyedDecodingContainerList(for: key, options: options)
+            let resultArray = keyedDecodingContainerList(for: key, options: options)
             
             let val = try resultArray.containerList.flatMap { (container: KeyedDecodingContainer<Key>) -> [V] in
                 if let _ = try? container.nestedUnkeyedContainer(forKey: resultArray.key) {
@@ -207,20 +207,19 @@ private final class DecoderKeyMap: KeyMapBase {
         }
     }
     
-    private func getContainerList(from parent: KeyedDecodingContainer<Key>, forKey key: Key) throws -> [KeyedDecodingContainer<Key>] {
+    private func getContainerList(from parent: KeyedDecodingContainer<Key>, forKey key: Key) -> [KeyedDecodingContainer<Key>] {
         if let unkeyedContainer = try? parent.nestedUnkeyedContainer(forKey: key) {
             return try getContainerList(fromUnkeyedParent: unkeyedContainer)
         } else if let keyedContainer = try? parent.nestedContainer(keyedBy: Key.self, forKey: key) {
             return [keyedContainer]
         } else {
-            let context = DecodingError.Context(codingPath: parent.codingPath, debugDescription: "Couldn't decode object for key: \(key)")
-            throw DecodingError.keyNotFound(key, context)
+            return []
         }
     }
     
     // MARK: - Array mapping
     
-    private func keyedDecodingContainerList(for keyCode: CodingKey, options: KeyOptions) throws -> (containerList: [KeyedDecodingContainer<Key>], key: Key) {
+    private func keyedDecodingContainerList(for keyCode: CodingKey, options: KeyOptions) -> (containerList: [KeyedDecodingContainer<Key>], key: Key) {
         var keys = keyCode.keys(for: options)
         guard !keys.isEmpty else { fatalError("encode failed - no key") }
         
@@ -229,13 +228,13 @@ private final class DecoderKeyMap: KeyMapBase {
         while keys.count != 1 {
             let key = keys.remove(at: 0)
             codingPath.append(key)
-            _ = try keyedDecodingContainerList(for: codingPath)
+            _ = keyedDecodingContainerList(for: codingPath)
         }
         
-        return (try keyedDecodingContainerList(for: codingPath), keys[0])
+        return (keyedDecodingContainerList(for: codingPath), keys[0])
     }
     
-    private func keyedDecodingContainerList(for codingPath: [CodingKey]) throws -> [KeyedDecodingContainer<Key>] {
+    private func keyedDecodingContainerList(for codingPath: [CodingKey]) -> [KeyedDecodingContainer<Key>] {
         let codePathString = codingPath.codePathString
         if let cached = containerListDictionary[codePathString] {
             return cached
@@ -247,8 +246,8 @@ private final class DecoderKeyMap: KeyMapBase {
         
         let parentCodePathString = codingPath.dropLast().codePathString
         if let parentList = containerListDictionary[parentCodePathString] {
-            let containerList = try parentList.flatMap { (parent: KeyedDecodingContainer<Key>) -> [KeyedDecodingContainer<Key>] in
-                return try self.getContainerList(from: parent, forKey: lastKey)
+            let containerList = parentList.flatMap { (parent: KeyedDecodingContainer<Key>) -> [KeyedDecodingContainer<Key>] in
+                return self.getContainerList(from: parent, forKey: lastKey)
             }
             containerListDictionary[codePathString] = containerList
             return containerList
@@ -257,7 +256,7 @@ private final class DecoderKeyMap: KeyMapBase {
         }
     }
     
-    private func getContainerList(fromUnkeyedParent parent: UnkeyedDecodingContainer) throws -> [KeyedDecodingContainer<Key>] {
+    private func getContainerList(fromUnkeyedParent parent: UnkeyedDecodingContainer) -> [KeyedDecodingContainer<Key>] {
         var keyedDecodingContainerList = [KeyedDecodingContainer<Key>]()
         var unkeyedDecodingContainerList = [UnkeyedDecodingContainer]()
         var mutableParent = parent
@@ -267,13 +266,12 @@ private final class DecoderKeyMap: KeyMapBase {
             } else if let unkeyedContainer = try? mutableParent.nestedUnkeyedContainer() {
                 unkeyedDecodingContainerList.append(unkeyedContainer)
             } else {
-                let context = DecodingError.Context(codingPath: parent.codingPath, debugDescription: "Couldn't decode object at path: \(parent.codingPath)")
-                throw DecodingError.dataCorrupted(context)
+                return []
             }
         }
         
         if !unkeyedDecodingContainerList.isEmpty {
-            return try unkeyedDecodingContainerList.flatMap { try self.getContainerList(fromUnkeyedParent: $0) }
+            return unkeyedDecodingContainerList.flatMap { self.getContainerList(fromUnkeyedParent: $0) }
         } else {
             return keyedDecodingContainerList
         }
