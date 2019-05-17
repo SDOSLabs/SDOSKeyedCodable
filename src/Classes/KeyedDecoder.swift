@@ -209,7 +209,7 @@ private final class DecoderKeyMap: KeyMapBase {
     
     private func getContainerList(from parent: KeyedDecodingContainer<Key>, forKey key: Key) -> [KeyedDecodingContainer<Key>] {
         if let unkeyedContainer = try? parent.nestedUnkeyedContainer(forKey: key) {
-            return try getContainerList(fromUnkeyedParent: unkeyedContainer)
+            return getContainerList(fromUnkeyedParent: unkeyedContainer)
         } else if let keyedContainer = try? parent.nestedContainer(keyedBy: Key.self, forKey: key) {
             return [keyedContainer]
         } else {
