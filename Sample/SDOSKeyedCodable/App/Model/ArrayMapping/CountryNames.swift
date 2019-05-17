@@ -12,7 +12,7 @@ import SDOSKeyedCodable
 struct CountryNames: Decodable, Keyedable {
     
     var name: String?
-    var citizenNames: [String]? = [String]()
+    var citizenNames: [String]? = []
     
     mutating func map(map: KeyMap) throws {
         try name <<- map["country.name"]
