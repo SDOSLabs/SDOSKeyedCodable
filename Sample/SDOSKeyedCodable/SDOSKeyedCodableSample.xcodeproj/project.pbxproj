@@ -274,8 +274,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SDOSKeyedCodableSample" */;
 			buildPhases = (
-				5CC7B7262243E7D60034969C /* XcodeVersion */,
 				B38051EDC8242D0DC07D6342 /* [CP] Check Pods Manifest.lock */,
+				5CC7B7262243E7D60034969C /* XcodeVersion */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,

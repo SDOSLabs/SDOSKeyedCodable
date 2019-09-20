@@ -5,9 +5,9 @@ Pod::Spec.new do |spec|
   spec.authors      = 'SDOS'
   spec.version      = @version
   spec.license      = { :type => 'MIT' }
-  spec.homepage     = 'https://svrgitpub.sdos.es/iOS/SDOSKeyedCodable'
+  spec.homepage     = 'https://github.com/SDOSLabs/SDOSKeyedCodable'
   spec.summary      = 'Librería que proporciona una implementación del protocolo Codable de Swift para mapeos más sencillos'
-  spec.source       = { :git => "https://svrgitpub.sdos.es/iOS/SDOSKeyedCodable.git", :tag => "v#{spec.version}" }
+  spec.source       = { :git => "https://github.com/SDOSLabs/SDOSKeyedCodable.git", :tag => "v#{spec.version}" }
   spec.framework    = ['Foundation']
   spec.requires_arc = true
 
