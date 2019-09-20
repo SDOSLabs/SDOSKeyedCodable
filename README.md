@@ -12,7 +12,7 @@
 
 # SDOSKeyedCodable
 
-- Para consultar los últimos cambios en la librería consultar el [CHANGELOG.md](https://svrgitpub.sdos.es/iOS/SDOSKeyedCodable/blob/master/CHANGELOG.md).
+- Para consultar los últimos cambios en la librería consultar el [CHANGELOG.md](https://github.com/SDOSLabs/SDOSKeyedCodable/blob/master/CHANGELOG.md).
 
 - Enlace confluence: https://kc.sdos.es/x/FALLAQ
 
@@ -376,7 +376,7 @@ Todo esto se hace con el `KeyOptions`.
 
 ## Proyecto de ejemplo
 
-* Descargar el proyecto SDOSKeyedCodable desde el siguiente enlace: https://svrgitpub.sdos.es/iOS/SDOSKeyedCodable.
+* Descargar el proyecto SDOSKeyedCodable desde el siguiente enlace: https://github.com/SDOSLabs/SDOSKeyedCodable.
 * Comprobar que, al pulsar el botón **Ver ejemplo** se muestra una app que permite probar las distintas funcionalidades de SDOSKeyedCodable.
 
 ## Dependencias
@@ -387,4 +387,4 @@ SDOSKeyedCodable no tiene dependencias.
 
 * [Codable](https://developer.apple.com/documentation/swift/codable)
 * [KeyedCodable](https://github.com/dgrzeszczak/KeyedCodable)
-* https://svrgitpub.sdos.es/iOS/SDOSKeyedCodable
+* https://github.com/SDOSLabs/SDOSKeyedCodable

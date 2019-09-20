@@ -1,27 +1,18 @@
 PODS:
-  - SDOS/Default (1.9.0):
-    - SDOS/Default/Manager (= 1.9.0)
-  - SDOS/Default/Manager (1.9.0)
   - SDOSKeyedCodable (1.0.1):
     - SDOSKeyedCodable/KeyedCodable (= 1.0.1)
   - SDOSKeyedCodable/KeyedCodable (1.0.1)
 
 DEPENDENCIES:
-  - SDOS/Default
   - SDOSKeyedCodable (from `../../`)
-
-SPEC REPOS:
-  http://git.sdos.es/ios/cocoapods-specs.git:
-    - SDOS
 
 EXTERNAL SOURCES:
   SDOSKeyedCodable:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  SDOS: e5a5735fe68732a0ebcd18113040a89542b6f52b
-  SDOSKeyedCodable: 7714f080380d98d5b6d33b62e3b54777b75bcdaa
+  SDOSKeyedCodable: 510f20ed013e5c54e8fee48ffe4035d1d5894325
 
-PODFILE CHECKSUM: feda9df7e5f37b086c5e252ec4119ee7f06cd32d
+PODFILE CHECKSUM: 9bc3db8c49caa98b6726add06816423e4a1f8809
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.5
