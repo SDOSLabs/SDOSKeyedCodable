@@ -24,16 +24,22 @@
 		5C80690D221421EF00FFACC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C80690F221421EF00FFACC3 /* Localizable.strings */; };
 		5CA9C9642215BD7D003EF197 /* allKeys.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CA9C9632215BD70003EF197 /* allKeys.txt */; };
 		5CA9C9662215BE39003EF197 /* PaymentMethodDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9C9652215BE39003EF197 /* PaymentMethodDTO.swift */; };
+		5CB99C98228BE20400E829F6 /* arrayMapping.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CB99C97228BE20300E829F6 /* arrayMapping.txt */; };
+		5CB99C9A228BE21900E829F6 /* CountryNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB99C99228BE21900E829F6 /* CountryNames.swift */; };
 		5CBF4589221553FB001152B6 /* ExampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF4588221553FB001152B6 /* ExampleListViewController.swift */; };
 		5CBF458C221554FB001152B6 /* ExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF458B221554FB001152B6 /* ExampleModel.swift */; };
 		5CBF458F221558DE001152B6 /* flatJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CBF458E221558DE001152B6 /* flatJSON.txt */; };
 		5CBF459222155C16001152B6 /* ShopDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF459122155C16001152B6 /* ShopDTO.swift */; };
 		5CBF4594221562E3001152B6 /* ExampleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF4593221562E3001152B6 /* ExampleDetailViewController.swift */; };
+		5CC4DDDE228971360044044A /* BoolSpecialCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4DDDD22896EE00044044A /* BoolSpecialCase.swift */; };
+		5CC4DDDF2289745A0044044A /* boolSpecialCase.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CC4DDDC22896ECA0044044A /* boolSpecialCase.txt */; };
 		771B0C56DF7004F31F80E782 /* libPods-SDOSKeyedCodableSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5660432DFFFA437B81E8FFC /* libPods-SDOSKeyedCodableSample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07075BC0257C52CBEE6D95AD /* Pods-SDOSKeyedCodable_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSKeyedCodable_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDOSKeyedCodable_Example/Pods-SDOSKeyedCodable_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		29EF03062355C9CA00D84661 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../../CHANGELOG.md; sourceTree = "<group>"; };
+		29EF03072355C9CA00D84661 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		511E497A2B99D6922EC7B91C /* libPods-SDOSKeyedCodable_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDOSKeyedCodable_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2E189D22169C1500D1D08E /* optionalArrayElements.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = optionalArrayElements.txt; sourceTree = "<group>"; };
 		5C2E189E22169C3200D1D08E /* SimpleElementDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleElementDTO.swift; sourceTree = "<group>"; };
@@ -54,11 +60,15 @@
 		5C80690E221421EF00FFACC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5CA9C9632215BD70003EF197 /* allKeys.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = allKeys.txt; sourceTree = "<group>"; };
 		5CA9C9652215BE39003EF197 /* PaymentMethodDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodDTO.swift; sourceTree = "<group>"; };
+		5CB99C97228BE20300E829F6 /* arrayMapping.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = arrayMapping.txt; sourceTree = "<group>"; };
+		5CB99C99228BE21900E829F6 /* CountryNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryNames.swift; sourceTree = "<group>"; };
 		5CBF4588221553FB001152B6 /* ExampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListViewController.swift; sourceTree = "<group>"; };
 		5CBF458B221554FB001152B6 /* ExampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleModel.swift; sourceTree = "<group>"; };
 		5CBF458E221558DE001152B6 /* flatJSON.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flatJSON.txt; sourceTree = "<group>"; };
 		5CBF459122155C16001152B6 /* ShopDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDTO.swift; sourceTree = "<group>"; };
 		5CBF4593221562E3001152B6 /* ExampleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleDetailViewController.swift; sourceTree = "<group>"; };
+		5CC4DDDC22896ECA0044044A /* boolSpecialCase.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = boolSpecialCase.txt; sourceTree = "<group>"; };
+		5CC4DDDD22896EE00044044A /* BoolSpecialCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolSpecialCase.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SDOSKeyedCodableSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDOSKeyedCodableSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6734D7DA6BB307ABC1603501 /* Pods-SDOSKeyedCodableSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSKeyedCodableSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDOSKeyedCodableSample/Pods-SDOSKeyedCodableSample.debug.xcconfig"; sourceTree = "<group>"; };
 		A5660432DFFFA437B81E8FFC /* libPods-SDOSKeyedCodableSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDOSKeyedCodableSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,10 +228,21 @@
 			path = AllKeys;
 			sourceTree = "<group>";
 		};
+		5CB99C96228BE20300E829F6 /* ArrayMapping */ = {
+			isa = PBXGroup;
+			children = (
+				5CB99C97228BE20300E829F6 /* arrayMapping.txt */,
+				5CB99C99228BE21900E829F6 /* CountryNames.swift */,
+			);
+			path = ArrayMapping;
+			sourceTree = "<group>";
+		};
 		5CBF458A221554D5001152B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				5C380320221577A7004F1AE2 /* ExampleProtocol.swift */,
+				5CB99C96228BE20300E829F6 /* ArrayMapping */,
+				5CC4DDDB22896E9F0044044A /* BoolSpecialCase */,
 				5CBF459022155BD2001152B6 /* FlatJSON */,
 				5CA9C9622215BD69003EF197 /* AllKeys */,
 				5C2E189C22169C0700D1D08E /* OptionalArrayElements */,
@@ -240,9 +261,20 @@
 			path = FlatJSON;
 			sourceTree = "<group>";
 		};
+		5CC4DDDB22896E9F0044044A /* BoolSpecialCase */ = {
+			isa = PBXGroup;
+			children = (
+				5CC4DDDC22896ECA0044044A /* boolSpecialCase.txt */,
+				5CC4DDDD22896EE00044044A /* BoolSpecialCase.swift */,
+			);
+			path = BoolSpecialCase;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				29EF03062355C9CA00D84661 /* CHANGELOG.md */,
+				29EF03072355C9CA00D84661 /* README.md */,
 				5C8068E9221408A400FFACC3 /* App */,
 				607FACD11AFB9204008FA782 /* Products */,
 				49145DB21239E111ABC2B147 /* Pods */,
@@ -274,8 +306,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SDOSKeyedCodableSample" */;
 			buildPhases = (
-				5CC7B7262243E7D60034969C /* XcodeVersion */,
 				B38051EDC8242D0DC07D6342 /* [CP] Check Pods Manifest.lock */,
+				5CC7B7262243E7D60034969C /* XcodeVersion */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
@@ -312,6 +344,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -330,10 +363,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CC4DDDF2289745A0044044A /* boolSpecialCase.txt in Resources */,
 				5C80690622140F8A00FFACC3 /* AppIcon.xcassets in Resources */,
 				5CBF458F221558DE001152B6 /* flatJSON.txt in Resources */,
 				5C80690D221421EF00FFACC3 /* Localizable.strings in Resources */,
 				5C8068F5221408A400FFACC3 /* Images.xcassets in Resources */,
+				5CB99C98228BE20400E829F6 /* arrayMapping.txt in Resources */,
 				5C8068F3221408A400FFACC3 /* LaunchScreen.xib in Resources */,
 				5C8068F4221408A400FFACC3 /* Main.storyboard in Resources */,
 				5C2E18A02216ADB100D1D08E /* optionalArrayElements.txt in Resources */,
@@ -395,6 +430,7 @@
 			files = (
 				5CBF4594221562E3001152B6 /* ExampleDetailViewController.swift in Sources */,
 				5C38031F22157605004F1AE2 /* IndentedObject.swift in Sources */,
+				5CC4DDDE228971360044044A /* BoolSpecialCase.swift in Sources */,
 				5C8068F6221408A400FFACC3 /* AppDelegate.swift in Sources */,
 				5CBF458C221554FB001152B6 /* ExampleModel.swift in Sources */,
 				5CBF4589221553FB001152B6 /* ExampleListViewController.swift in Sources */,
@@ -403,6 +439,7 @@
 				5C8068F2221408A400FFACC3 /* InitialViewController.swift in Sources */,
 				5C806909221420C100FFACC3 /* Constants.swift in Sources */,
 				5C2E18A52216BE0C00D1D08E /* KeyOptionsExampleDTO.swift in Sources */,
+				5CB99C9A228BE21900E829F6 /* CountryNames.swift in Sources */,
 				5CA9C9662215BE39003EF197 /* PaymentMethodDTO.swift in Sources */,
 				5C2E189F22169FF700D1D08E /* SimpleElementDTO.swift in Sources */,
 			);
@@ -553,7 +590,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "DEV Generic";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -571,7 +608,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

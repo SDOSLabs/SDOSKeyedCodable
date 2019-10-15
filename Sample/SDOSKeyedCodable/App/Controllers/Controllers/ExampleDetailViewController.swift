@@ -48,11 +48,8 @@ class ExampleDetailViewController: UIViewController {
                 return DetailSection(title:title(), objects: [obj])
             case .decodedObject:
                 var objects = [IndentedObject]()
-                if
-                    let parsedObjectOpt = try? example?.type.parseJSON(),
-                    let parsedObject = parsedObjectOpt {
-                    objects = IndentedObject.getPlainListOfIndentedObjects(from: parsedObject)
-                    
+                if let parsedObject = try? example?.type.parseJSON() {
+                    objects = IndentedObject.getPlainListOfIndentedObjects(from: parsedObject) 
                 }
                 return DetailSection(title:title(), objects: objects)
             }
@@ -119,7 +116,7 @@ extension ExampleDetailViewController: UITableViewDataSource {
 extension ExampleDetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

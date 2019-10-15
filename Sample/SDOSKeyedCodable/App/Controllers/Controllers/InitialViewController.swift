@@ -14,7 +14,7 @@ class InitialViewController: UIViewController {
     //MARK: - Properties
     
     lazy fileprivate var spinner: UIActivityIndicatorView = {
-        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        let activityIndicator = UIActivityIndicatorView(style: .gray)
         activityIndicator.hidesWhenStopped = true
         return activityIndicator
     }()
@@ -119,6 +119,10 @@ class InitialViewController: UIViewController {
     @IBAction func actionGoForward(_ sender: Any) {
         webView.goForward()
         updateBackForwardButtons()
+    }
+    
+    @IBAction func actionSeeExample(_ sender: Any) {
+        performSegue(withIdentifier: "SegueSeeExample", sender: self)
     }
     
 }

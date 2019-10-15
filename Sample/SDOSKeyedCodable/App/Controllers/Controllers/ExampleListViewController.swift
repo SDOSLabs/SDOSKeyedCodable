@@ -47,7 +47,6 @@ class ExampleListViewController: UIViewController {
             else {
                 return
             }
-            
             detail.example = example
         }
     }
@@ -89,7 +88,7 @@ extension ExampleListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
     
 }
