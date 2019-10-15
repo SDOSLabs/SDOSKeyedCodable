@@ -38,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		07075BC0257C52CBEE6D95AD /* Pods-SDOSKeyedCodable_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSKeyedCodable_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDOSKeyedCodable_Example/Pods-SDOSKeyedCodable_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		29EF03062355C9CA00D84661 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../../CHANGELOG.md; sourceTree = "<group>"; };
+		29EF03072355C9CA00D84661 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		511E497A2B99D6922EC7B91C /* libPods-SDOSKeyedCodable_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDOSKeyedCodable_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2E189D22169C1500D1D08E /* optionalArrayElements.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = optionalArrayElements.txt; sourceTree = "<group>"; };
 		5C2E189E22169C3200D1D08E /* SimpleElementDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleElementDTO.swift; sourceTree = "<group>"; };
@@ -271,6 +273,8 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				29EF03062355C9CA00D84661 /* CHANGELOG.md */,
+				29EF03072355C9CA00D84661 /* README.md */,
 				5C8068E9221408A400FFACC3 /* App */,
 				607FACD11AFB9204008FA782 /* Products */,
 				49145DB21239E111ABC2B147 /* Pods */,
