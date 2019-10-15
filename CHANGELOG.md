@@ -1,4 +1,4 @@
-## [Head]
+## [1.1.0 Mejoras de parseo](https://github.com/SDOSLabs/SDOSKeyedCodable/tree/v1.1.0)
 
 - Corregido crash en proyecto de ejemplo al pulsar el botón de "Ver ejemplo"
 - Actualizada librería y proyecto de ejemplo a Swift 5

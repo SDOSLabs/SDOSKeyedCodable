@@ -1,60 +1,60 @@
 {
-"country": {
-"id": 34,
-"name": "Spain",
-"cities": [
-{
-"id": 41,
-"name" : "Sevilla",
-"citizens" : [
-{
-"id": 1,
-"name": "Pedro",
-"surname": "Pedregol"
-},
-{
-"id": 2,
-"name": "Juan",
-"surname": "Jiménez"
-},
-{
-"id": 3,
-"name": "Alberto",
-"surname": "Albero"
-},
-{
-"id": 4,
-"name": "Mónica",
-"surname": "Martínez"
-}
-]
-},
-{
-"id": 21,
-"name" : "Huelva",
-"citizens" : [
-{
-"id": 5,
-"name": "Francisco",
-"surname": "Fernández"
-},
-{
-"id": 6,
-"name": "Juan",
-"surname": "Jiménez"
-},
-{
-"id": 7,
-"name": "Simona",
-"surname": "Sánchez"
-},
-{
-"id": 8,
-"name": "Ángel",
-"surname": "Álvarez"
-}
-]
-}
-]
-}
+  "country": {
+    "id": 34,
+    "name": "Spain",
+    "cities": [
+      {
+        "id": 41,
+        "name": "Sevilla",
+        "citizens": [
+          {
+            "id": 1,
+            "name": "Pedro",
+            "surname": "Pedregol"
+          },
+          {
+            "id": 2,
+            "name": "Juan",
+            "surname": "Jiménez"
+          },
+          {
+            "id": 3,
+            "name": "Alberto",
+            "surname": "Albero"
+          },
+          {
+            "id": 4,
+            "name": "Mónica",
+            "surname": "Martínez"
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "name": "Huelva",
+        "citizens": [
+          {
+            "id": 5,
+            "name": "Francisco",
+            "surname": "Fernández"
+          },
+          {
+            "id": 6,
+            "name": "Juan",
+            "surname": "Jiménez"
+          },
+          {
+            "id": 7,
+            "name": "Simona",
+            "surname": "Sánchez"
+          },
+          {
+            "id": 8,
+            "name": "Ángel",
+            "surname": "Álvarez"
+          }
+        ]
+      }
+    ]
+  }
 }
