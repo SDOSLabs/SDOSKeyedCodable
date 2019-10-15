@@ -18,11 +18,13 @@ public struct KeyOptions {
     public let delimiter: String?
     public let flat: String?
     public let optionalArrayElements: String?
+    public let arrayMapping: String?
 
-    public init(delimiter: String? = ".", flat: String? = "", optionalArrayElements: String? = "* ") {
+    public init(delimiter: String? = ".", flat: String? = "", optionalArrayElements: String? = "* ", arrayMapping: String? = "[]") {
         self.delimiter = delimiter
         self.flat = flat
         self.optionalArrayElements = optionalArrayElements
+        self.arrayMapping = arrayMapping
     }
 }
 

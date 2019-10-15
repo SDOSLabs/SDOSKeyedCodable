@@ -22,5 +22,25 @@
         {
             "name": "Object 6"
         }
+    ],
+    "array": [
+        {
+            "name" : "nombre0"
+        },
+        {
+            "name" : "nombre1"
+        },
+        {
+            "name" : "nombre2"
+        },
+        {
+            "name" : "nombre3"
+        },
+        {
+            "name" : "nombre4"
+        },
+        {
+            "name" : "nombre5"
+        }
     ]
 }

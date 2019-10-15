@@ -17,9 +17,11 @@ struct SimpleElementDTO: Decodable {
 
 struct OptionalArray: Decodable, Keyedable {
     private(set) var array: [SimpleElementDTO]!
+    private(set) var arrayNames: [String]?
     
     mutating func map(map: KeyMap) throws {
         try array <<- map["* elements"]
+        try arrayNames <<- map["array.name"]
     }
     
     init(from decoder: Decoder) throws {
