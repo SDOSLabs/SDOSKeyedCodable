@@ -1,4 +1,4 @@
-@version = "1.0.1"
+@version = "1.1.0"
 Pod::Spec.new do |spec|
   spec.platform     = :ios, '9.0'
   spec.name         = 'SDOSKeyedCodable'
