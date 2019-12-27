@@ -9,11 +9,15 @@
 import Foundation
 
 enum ExampleType: CaseIterable {
-    case flatJSON, allKeys, optionalArrayElements, keyOptions
+    case arrayMapping, boolSpecialCase, flatJSON, allKeys, optionalArrayElements, keyOptions
     
     func getJSON() -> String? {
         let resourceName: String
         switch self {
+        case .arrayMapping:
+            resourceName = "arrayMapping"
+        case .boolSpecialCase:
+            resourceName = "boolSpecialCase"
         case .flatJSON:
             resourceName = "flatJSON"
         case .allKeys:
@@ -38,6 +42,10 @@ enum ExampleType: CaseIterable {
         
         do {
             switch self {
+            case .arrayMapping:
+                obj = try JSONDecoder().decode(CountryNames.self, from: jsonData)
+            case .boolSpecialCase:
+                obj = try JSONDecoder().decode(BoolSpecialCase.self, from: jsonData)
             case .flatJSON:
                 obj = try JSONDecoder().decode(ShopDTO.self, from: jsonData)
             case .allKeys:
@@ -56,6 +64,10 @@ enum ExampleType: CaseIterable {
     
     func getImplementation() -> String? {
         switch self {
+        case .arrayMapping:
+            return CountryNames.implementation
+        case .boolSpecialCase:
+            return BoolSpecialCase.implementation
         case .flatJSON:
             return ShopDTO.implementation
         case .allKeys:
@@ -69,6 +81,10 @@ enum ExampleType: CaseIterable {
     
     func getTypeName() -> String? {
         switch self {
+        case .arrayMapping:
+            return String(describing: CountryNames.self)
+        case .boolSpecialCase:
+            return String(describing: BoolSpecialCase.self)
         case .flatJSON:
             return String(describing: ShopDTO.self)
         case .allKeys:
@@ -90,6 +106,14 @@ struct Example {
     init(type: ExampleType) {
         self.type = type
         switch type {
+        case .arrayMapping:
+            title = NSLocalizedString("SDOSKeyedCodableExample.type.arrayMapping.name", comment: "")
+            description = NSLocalizedString("SDOSKeyedCodableExample.type.arrayMapping.description", comment: "")
+            detailedDescription = NSLocalizedString("SDOSKeyedCodableExample.type.arrayMapping.detailedDescription", comment: "")
+        case .boolSpecialCase:
+            title = NSLocalizedString("SDOSKeyedCodableExample.type.boolSpecialCase.name", comment: "")
+            description = NSLocalizedString("SDOSKeyedCodableExample.type.boolSpecialCase.description", comment: "")
+            detailedDescription = NSLocalizedString("SDOSKeyedCodableExample.type.boolSpecialCase.detailedDescription", comment: "")
         case .flatJSON:
             title = NSLocalizedString("SDOSKeyedCodableExample.type.flat.name", comment: "")
             description = NSLocalizedString("SDOSKeyedCodableExample.type.flat.description", comment: "")

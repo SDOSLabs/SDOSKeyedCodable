@@ -12,7 +12,7 @@
 
 # SDOSKeyedCodable
 
-- Para consultar los últimos cambios en la librería consultar el [CHANGELOG.md](https://svrgitpub.sdos.es/iOS/SDOSKeyedCodable/blob/master/CHANGELOG.md).
+- Para consultar los últimos cambios en la librería consultar el [CHANGELOG.md](https://github.com/SDOSLabs/SDOSKeyedCodable/blob/master/CHANGELOG.md).
 
 - Enlace confluence: https://kc.sdos.es/x/FALLAQ
 
@@ -72,13 +72,15 @@ Deberemos usar estos operadores en la implementación de la función `map(map: )
 public struct KeyOptions {
     public let delimiter: String?
     public let flat: String?
-    public let optionalArrayElements: String?
+    public let optionalArrayElements: String
+    public let arrayMapping: String?
 
 	// Inicializador con opciones por defecto
-    public init(delimiter: String? = ".", flat: String? = "", optionalArrayElements: String? = "* ") {
+    public init(delimiter: String? = ".", flat: String? = "", optionalArrayElements: String? = "* ", arrayMapping: String? = "[]") {
         self.delimiter = delimiter
         self.flat = flat
         self.optionalArrayElements = optionalArrayElements
+        self.arrayMapping = arrayMapping
     }
 }
 
@@ -97,6 +99,8 @@ Con el SDOSKeyedCodable podemos realizar el parseo con ciertas opciones avanzada
 * *Delimiter*: para parsear claves anidadas y configurar el carácter que simboliza el separador. Por defecto, se usa el punto `"."` para indicar una ruta de claves anidadas (por ejemplo, `"response.user.id"` se usaría para acceder directamente al ID del usuario).
 * *Flat*: para anidar varias claves en raiz dentro de un objeto. Por defecto se usa el string vacío `""`. Más adelante veremos un ejemplo.
 * *OptionalArrayElements*: para parsear un array de objetos opcionales. Esto significa que el array parseado solo contendrá aquellos elementos cuyo parseo se ha podido realizar correctamente. Por defecto se usa el string `"* "`.
+* *Array mapping*: para parsear en un array las misma propiedades de arrays de objetos que están al mismo nivel del JSON. Por defecto se usa el string `"[]"`.
+
 * *All Keys*: para intentar el parseo de un mismo objeto en todas las 'keys' del json.
 
 Usando el `KeyOptions` podemos configurar qué strings indican cada una de las funcionalidades anteriores. Por ejemplo, si en un JSON vinieran claves que contuvieran puntos `"."`, usando el `KeyOptions` podríamos cambiar el string que indica un keypath de claves (claves anidadas) para que no haya errores. Así, podríamos representar un keypath como `"response>user>id"`, pasando el argumento KeyOptions(delimiter: `">"`).
@@ -116,8 +120,16 @@ Por lo general, SDOSKeyedCodable intervendrá al declarar los DTOs que se usará
     * Puesto que en la implementación de `init(from: )` no se van a setear, a priori, las propiedades del DTO, es necesario que sus propiedades cumplan una de las siguientes condiciones:
         1. Sean opcionales (ya sean opcionales `?` (**recomendado**) o *implicitly unwrapped optionals* `!` (**no recomendado**).
         2. Sean no opcionales con un valor por defecto. En este caso, el valor por defecto no significa nada, pues si la propiedad es no opcional y no se consigue parsear, se devolverá un error de parseo del DTO.
-La customización del parseo (opciones `Delimiter`, `Flat` y `OptionalArrayElements` anteriores) se configuran para cada propiedad.
 
+        
+SDOSKeyedCodable permite configurar las opciones de mapeo avanzadas que proporciona (`Delimiter`, `Flat`, `OptionalArrayElements` y `arrayMapping`). Esta customización del parseo es independiente para cada propiedad.
+
+* Si las claves del JSON a parsear contuvieran puntos, podemos cambiar el carácter que marcará el separador para el keypath de la ruta a parsear. En este ejemplo, como la clave `".greeting"` contiene un punto, se ha modificado el separador de la ruta al carácter `"+"`.
+* Si un array de elementos opcionales viene en una clave que comienza por `"* "`, podemos cambiar el string que denota un array opcional. En el ejemplo, se hace para la propiedad `array1` con el string `"### "`.
+* También se puede cambiar el string que denota un parseo *flat* (por defecto es el String vacío `""`). De esta forma podemos parsear el objeto `location` con los valores que vienen dentro de la clave `""`, en lugar de usar la `"latitud"` y `"longitud"` que vienen en la raiz.
+* Si la clave inicial del JSON a parsear comenzara por el string `"[]"`, podemos cambiar el string ue denota un parseo de tipo `arrayMapping`.
+
+Todo esto se hace con el `KeyOptions` (ver Ejemplo 5).
 
 ### Ejemplos de uso de SDOSKeyedCodable
 
@@ -140,7 +152,7 @@ struct UserDTO: Decodable, Keyedable {
         try KeyedDecoder(with: decoder).decode(to: &self)
     }   
 }
-````
+```
 Este DTO podría usarse para parsear el siguiente JSON:
 ```js
 {
@@ -153,7 +165,7 @@ Este DTO podría usarse para parsear el siguiente JSON:
 	},
     "cupones" : []
 }
-````
+```
 
 **Ejemplo 2**. En este ejemplo se refleja la característica de *Flat*.
 
@@ -296,7 +308,7 @@ struct OptionalArray: Decodable, Keyedable {
 ```
 Obsérvese que, con el String `"* elements"` estamos indicando que el array en la clave `"elements"` debe tratarse como un array de elementos opcionales (es decir, de elementos cuyo parseo puede fallar sin que por eso falle el parseo de todo el array).
 
-**Ejemplo 5**. Por último, damos un ejemplo más complejo de parseo de JSON combinando los casos anteriores y cambiando los strings por defecto de las características de mapeo anteriores.
+**Ejemplo 5**. Este ejemplo más complejo de parseo de JSON combina los casos anteriores y cambia los strings por defecto de las características de mapeo anteriores.
 
 Tenemos el JSON:
 ```js
@@ -366,17 +378,119 @@ struct KeyOptionsExampleDTO: Codable, Keyedable {
     }
 }
 ```
-SDOSKeyedCodable permite configurar las opciones de mapeo avanzadas que proporciona.
 
-* Si las claves del JSON a parsear contuvieran puntos, podemos cambiar el carácter que marcará el separador para el keypath de la ruta a parsear. En este ejemplo, como la clave `".greeting"` contiene un punto, se ha modificado el separador de la ruta al carácter `"+"`.
-* Si un array de elementos opcionales viene en una clave que comienza por `"* "`, podemos cambiar el string que denota un array opcional. En el ejemplo, se hace para la propiedad `array1` con el string `"### "`.
-* También se puede cambiar el string que denota un parseo *flat* (por defecto es el String vacío `""`). De esta forma podemos parsear el objeto `location` con los valores que vienen dentro de la clave `""`, en lugar de usar la `"latitud"` y `"longitud"` que vienen en la raiz.
+**Ejemplo 6**. En este ejemplo se refleja la característica de *array mapping*.
 
-Todo esto se hace con el `KeyOptions`.
+Tenemos el siguiente JSON que contiene información de un país.
+```js
+{
+    "country": {
+        "id": 34,
+        "name": "Spain",
+        "cities": [
+            {
+                "id": 41,
+                "name": "Sevilla",
+                "citizens": [
+                    {
+                        "id": 1,
+                        "name": "Pedro",
+                        "surname": "Pedregol"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Juan",
+                        "surname": "Jiménez"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Alberto",
+                        "surname": "Albero"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Mónica",
+                        "surname": "Martínez"
+                    }
+                ]
+            },
+            {
+                "id": 21,
+                "name": "Huelva",
+                "citizens": [
+                    {
+                        "id": 5,
+                        "name": "Francisco",
+                        "surname": "Fernández"
+                    },
+                    {
+                        "id": 6,
+                        "name": "Juan",
+                        "surname": "Jiménez"
+                    },
+                    {
+                        "id": 7,
+                        "name": "Simona",
+                        "surname": "Sánchez"
+                    },
+                    {
+                        "id": 8,
+                        "name": "Ángel",
+                        "surname": "Álvarez"
+                    }
+                ]
+            }
+        ]
+    }
+}
+```
+
+ El país tiene un array de ciudades y, cada ciudad tiene un array de ciudadanos. La característica de *array mapping* permite, por ejemplo, parsear en un solo array todos los nombres de todos los ciudadanos del pais. Lo hacemos de la siguiente manera:
+
+ ```js
+ struct CountryNames: Decodable, Keyedable {
+    
+    var name: String?
+    var citizenNames: [String]? = []
+    
+    mutating func map(map: KeyMap) throws {
+        try name <<- map["country.name"]
+        try citizenNames <<- map["[]country.cities.citizens.name"]
+    }
+    
+    init(from decoder: Decoder) throws {
+        try KeyedDecoder(with: decoder).decode(to: &self)
+    }
+    
+}
+ ```
+Obsérvese que la variable `citizenNames` es un array (opcional) de strings. Y, si nos fijamos en el JSON, esos nombres se acceden mediante la ruta: `country` --> `cities` --> dentro de cada elemento --> `citizens`--> dentro de cada elemento --> `name`. Tras el parseo, `citizenNames` contendrá los nombres de todos los ciudadanos de todas las ciudades. 
+
+Esto, no solo puede hacerse con arrays de tipos primitivos (como `[String]` en este caso), sino que también puede hacerse para parsear en un mismo array un tipo `Decodable`. Por ejemplo:
+
+```js
+ struct CountryNames: Decodable, Keyedable {
+    
+    var name: String?
+    var citizens: [Citizen]? = []
+    
+    mutating func map(map: KeyMap) throws {
+        try name <<- map["country.name"]
+        try citizens <<- map["[]country.cities.citizens"]
+    }
+    
+    init(from decoder: Decoder) throws {
+        try KeyedDecoder(with: decoder).decode(to: &self)
+    }
+    
+}
+ ```
+En este caso, tendríamos en `citizens` un array con todos los ciudadanos de todas las ciudades del pais.
+
 
 ## Proyecto de ejemplo
 
-* Descargar el proyecto SDOSKeyedCodable desde el siguiente enlace: https://svrgitpub.sdos.es/iOS/SDOSKeyedCodable.
+* Descargar el proyecto SDOSKeyedCodable desde el siguiente enlace: https://github.com/SDOSLabs/SDOSKeyedCodable.
 * Comprobar que, al pulsar el botón **Ver ejemplo** se muestra una app que permite probar las distintas funcionalidades de SDOSKeyedCodable.
 
 ## Dependencias
@@ -387,4 +501,4 @@ SDOSKeyedCodable no tiene dependencias.
 
 * [Codable](https://developer.apple.com/documentation/swift/codable)
 * [KeyedCodable](https://github.com/dgrzeszczak/KeyedCodable)
-* https://svrgitpub.sdos.es/iOS/SDOSKeyedCodable
+* https://github.com/SDOSLabs/SDOSKeyedCodable
