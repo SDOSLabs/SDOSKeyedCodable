@@ -14,23 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "SDOSKeyedCodableSample.app"
-               BlueprintName = "SDOSKeyedCodableSample"
+               BlueprintIdentifier = "292C7AA223B61CBD00443A07"
+               BuildableName = "SDOSKeyedCodableSampleSPM.app"
+               BlueprintName = "SDOSKeyedCodableSampleSPM"
                ReferencedContainer = "container:SDOSKeyedCodableSample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "SDOSKeyedCodable_Tests.xctest"
-               BlueprintName = "SDOSKeyedCodable_Tests"
+               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
+               BuildableName = "SDOSKeyedCodableSample.app"
+               BlueprintName = "SDOSKeyedCodableSample"
                ReferencedContainer = "container:SDOSKeyedCodableSample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -41,18 +41,6 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "SDOSKeyedCodable_Tests.xctest"
-               BlueprintName = "SDOSKeyedCodable_Tests"
-               ReferencedContainer = "container:SDOSKeyedCodableSample.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -62,8 +50,8 @@
             ReferencedContainer = "container:SDOSKeyedCodableSample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
+      <Testables>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -85,8 +73,6 @@
             ReferencedContainer = "container:SDOSKeyedCodableSample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

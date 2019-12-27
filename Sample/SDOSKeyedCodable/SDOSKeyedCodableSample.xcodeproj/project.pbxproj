@@ -7,7 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		298EE44322E57E3A00D0A590 /* SDOSKeyedCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 298EE44222E57E3A00D0A590 /* SDOSKeyedCodable */; };
+		292C7AA623B61CBD00443A07 /* ExampleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF4593221562E3001152B6 /* ExampleDetailViewController.swift */; };
+		292C7AA723B61CBD00443A07 /* IndentedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C38031E22157605004F1AE2 /* IndentedObject.swift */; };
+		292C7AA823B61CBD00443A07 /* BoolSpecialCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4DDDD22896EE00044044A /* BoolSpecialCase.swift */; };
+		292C7AA923B61CBD00443A07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8068F0221408A400FFACC3 /* AppDelegate.swift */; };
+		292C7AAA23B61CBD00443A07 /* ExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF458B221554FB001152B6 /* ExampleModel.swift */; };
+		292C7AAB23B61CBD00443A07 /* ExampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF4588221553FB001152B6 /* ExampleListViewController.swift */; };
+		292C7AAC23B61CBD00443A07 /* ExampleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C380320221577A7004F1AE2 /* ExampleProtocol.swift */; };
+		292C7AAD23B61CBD00443A07 /* ShopDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF459122155C16001152B6 /* ShopDTO.swift */; };
+		292C7AAE23B61CBD00443A07 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8068EA221408A400FFACC3 /* InitialViewController.swift */; };
+		292C7AAF23B61CBD00443A07 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C806908221420C100FFACC3 /* Constants.swift */; };
+		292C7AB023B61CBD00443A07 /* KeyOptionsExampleDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E18A32216BBD400D1D08E /* KeyOptionsExampleDTO.swift */; };
+		292C7AB123B61CBD00443A07 /* CountryNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB99C99228BE21900E829F6 /* CountryNames.swift */; };
+		292C7AB223B61CBD00443A07 /* PaymentMethodDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9C9652215BE39003EF197 /* PaymentMethodDTO.swift */; };
+		292C7AB323B61CBD00443A07 /* SimpleElementDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E189E22169C3200D1D08E /* SimpleElementDTO.swift */; };
+		292C7AB523B61CBD00443A07 /* SDOSKeyedCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 292C7AA323B61CBD00443A07 /* SDOSKeyedCodable */; };
+		292C7AB723B61CBD00443A07 /* boolSpecialCase.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CC4DDDC22896ECA0044044A /* boolSpecialCase.txt */; };
+		292C7AB823B61CBD00443A07 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C80690522140F8A00FFACC3 /* AppIcon.xcassets */; };
+		292C7AB923B61CBD00443A07 /* flatJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CBF458E221558DE001152B6 /* flatJSON.txt */; };
+		292C7ABA23B61CBD00443A07 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C80690F221421EF00FFACC3 /* Localizable.strings */; };
+		292C7ABB23B61CBD00443A07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C8068EF221408A400FFACC3 /* Images.xcassets */; };
+		292C7ABC23B61CBD00443A07 /* arrayMapping.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CB99C97228BE20300E829F6 /* arrayMapping.txt */; };
+		292C7ABD23B61CBD00443A07 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8068EB221408A400FFACC3 /* LaunchScreen.xib */; };
+		292C7ABE23B61CBD00443A07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8068ED221408A400FFACC3 /* Main.storyboard */; };
+		292C7ABF23B61CBD00443A07 /* optionalArrayElements.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5C2E189D22169C1500D1D08E /* optionalArrayElements.txt */; };
+		292C7AC023B61CBD00443A07 /* allKeys.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CA9C9632215BD70003EF197 /* allKeys.txt */; };
+		292C7AC123B61CBD00443A07 /* Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5C8068FB2214098900FFACC3 /* Shared.xcconfig */; };
+		292C7AC223B61CBD00443A07 /* keyOptions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5C2E18A22216BBD400D1D08E /* keyOptions.txt */; };
 		5C2E189F22169FF700D1D08E /* SimpleElementDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E189E22169C3200D1D08E /* SimpleElementDTO.swift */; };
 		5C2E18A02216ADB100D1D08E /* optionalArrayElements.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5C2E189D22169C1500D1D08E /* optionalArrayElements.txt */; };
 		5C2E18A42216BBDD00D1D08E /* keyOptions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5C2E18A22216BBD400D1D08E /* keyOptions.txt */; };
@@ -34,14 +60,16 @@
 		5CBF4594221562E3001152B6 /* ExampleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF4593221562E3001152B6 /* ExampleDetailViewController.swift */; };
 		5CC4DDDE228971360044044A /* BoolSpecialCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4DDDD22896EE00044044A /* BoolSpecialCase.swift */; };
 		5CC4DDDF2289745A0044044A /* boolSpecialCase.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5CC4DDDC22896ECA0044044A /* boolSpecialCase.txt */; };
-		771B0C56DF7004F31F80E782 /* libPods-SDOSKeyedCodableSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5660432DFFFA437B81E8FFC /* libPods-SDOSKeyedCodableSample.a */; };
+		D1D555F3CB14E38E3E8C6966 /* libPods-SDOSKeyedCodableSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D25A5B5415C10F3E56B1AF57 /* libPods-SDOSKeyedCodableSample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		07075BC0257C52CBEE6D95AD /* Pods-SDOSKeyedCodable_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSKeyedCodable_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDOSKeyedCodable_Example/Pods-SDOSKeyedCodable_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		292C7AC623B61CBD00443A07 /* SDOSKeyedCodableSampleSPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDOSKeyedCodableSampleSPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		292C7AC823B61D9600443A07 /* App.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = App.release.xcconfig; sourceTree = "<group>"; };
+		292C7AC923B61DE500443A07 /* App.Pods.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = App.Pods.debug.xcconfig; sourceTree = "<group>"; };
+		292C7ACA23B61DE500443A07 /* App.Pods.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = App.Pods.release.xcconfig; sourceTree = "<group>"; };
 		29EF03062355C9CA00D84661 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../../CHANGELOG.md; sourceTree = "<group>"; };
 		29EF03072355C9CA00D84661 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
-		511E497A2B99D6922EC7B91C /* libPods-SDOSKeyedCodable_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDOSKeyedCodable_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2E189D22169C1500D1D08E /* optionalArrayElements.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = optionalArrayElements.txt; sourceTree = "<group>"; };
 		5C2E189E22169C3200D1D08E /* SimpleElementDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleElementDTO.swift; sourceTree = "<group>"; };
 		5C2E18A22216BBD400D1D08E /* keyOptions.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = keyOptions.txt; sourceTree = "<group>"; };
@@ -71,20 +99,48 @@
 		5CC4DDDC22896ECA0044044A /* boolSpecialCase.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = boolSpecialCase.txt; sourceTree = "<group>"; };
 		5CC4DDDD22896EE00044044A /* BoolSpecialCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolSpecialCase.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SDOSKeyedCodableSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDOSKeyedCodableSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		704D7A8FC66FE810DBD85126 /* Pods-SDOSKeyedCodableSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSKeyedCodableSample.release.xcconfig"; path = "Target Support Files/Pods-SDOSKeyedCodableSample/Pods-SDOSKeyedCodableSample.release.xcconfig"; sourceTree = "<group>"; };
+		B088DCF411D3ACDCDCF12685 /* Pods-SDOSKeyedCodableSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSKeyedCodableSample.debug.xcconfig"; path = "Target Support Files/Pods-SDOSKeyedCodableSample/Pods-SDOSKeyedCodableSample.debug.xcconfig"; sourceTree = "<group>"; };
+		D25A5B5415C10F3E56B1AF57 /* libPods-SDOSKeyedCodableSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDOSKeyedCodableSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		292C7AB423B61CBD00443A07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				292C7AB523B61CBD00443A07 /* SDOSKeyedCodable in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCD1AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				298EE44322E57E3A00D0A590 /* SDOSKeyedCodable in Frameworks */,
+				D1D555F3CB14E38E3E8C6966 /* libPods-SDOSKeyedCodableSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		292C7A9F23B6118C00443A07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D25A5B5415C10F3E56B1AF57 /* libPods-SDOSKeyedCodableSample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		425E3047802FBF383428CB15 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B088DCF411D3ACDCDCF12685 /* Pods-SDOSKeyedCodableSample.debug.xcconfig */,
+				704D7A8FC66FE810DBD85126 /* Pods-SDOSKeyedCodableSample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5C2E189C22169C0700D1D08E /* OptionalArrayElements */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +191,9 @@
 		5C8068F92214097100FFACC3 /* Profiles */ = {
 			isa = PBXGroup;
 			children = (
+				292C7AC923B61DE500443A07 /* App.Pods.debug.xcconfig */,
+				292C7ACA23B61DE500443A07 /* App.Pods.release.xcconfig */,
+				292C7AC823B61D9600443A07 /* App.release.xcconfig */,
 				5C8068FE22140A3A00FFACC3 /* App.debug.xcconfig */,
 				5C8068FB2214098900FFACC3 /* Shared.xcconfig */,
 			);
@@ -263,6 +322,8 @@
 				29EF03072355C9CA00D84661 /* README.md */,
 				5C8068E9221408A400FFACC3 /* App */,
 				607FACD11AFB9204008FA782 /* Products */,
+				292C7A9F23B6118C00443A07 /* Frameworks */,
+				425E3047802FBF383428CB15 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* SDOSKeyedCodableSample.app */,
+				292C7AC623B61CBD00443A07 /* SDOSKeyedCodableSampleSPM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -277,11 +339,32 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		292C7AA223B61CBD00443A07 /* SDOSKeyedCodableSampleSPM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 292C7AC323B61CBD00443A07 /* Build configuration list for PBXNativeTarget "SDOSKeyedCodableSampleSPM" */;
+			buildPhases = (
+				292C7AA423B61CBD00443A07 /* XcodeVersion */,
+				292C7AA523B61CBD00443A07 /* Sources */,
+				292C7AB423B61CBD00443A07 /* Frameworks */,
+				292C7AB623B61CBD00443A07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDOSKeyedCodableSampleSPM;
+			packageProductDependencies = (
+				292C7AA323B61CBD00443A07 /* SDOSKeyedCodable */,
+			);
+			productName = SDOSKeyedCodable;
+			productReference = 292C7AC623B61CBD00443A07 /* SDOSKeyedCodableSampleSPM.app */;
+			productType = "com.apple.product-type.application";
+		};
 		607FACCF1AFB9204008FA782 /* SDOSKeyedCodableSample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SDOSKeyedCodableSample" */;
 			buildPhases = (
-				B38051EDC8242D0DC07D6342 /* [CP] Check Pods Manifest.lock */,
+				A1B33FD1D1BC7F31D394EDEC /* [CP] Check Pods Manifest.lock */,
 				5CC7B7262243E7D60034969C /* XcodeVersion */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
@@ -292,9 +375,6 @@
 			dependencies = (
 			);
 			name = SDOSKeyedCodableSample;
-			packageProductDependencies = (
-				298EE44222E57E3A00D0A590 /* SDOSKeyedCodable */,
-			);
 			productName = SDOSKeyedCodable;
 			productReference = 607FACD01AFB9204008FA782 /* SDOSKeyedCodableSample.app */;
 			productType = "com.apple.product-type.application";
@@ -327,19 +407,36 @@
 				Base,
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
-			packageReferences = (
-				298EE44122E57E3A00D0A590 /* XCRemoteSwiftPackageReference "SDOSKeyedCodable" */,
-			);
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* SDOSKeyedCodableSample */,
+				292C7AA223B61CBD00443A07 /* SDOSKeyedCodableSampleSPM */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		292C7AB623B61CBD00443A07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				292C7AB723B61CBD00443A07 /* boolSpecialCase.txt in Resources */,
+				292C7AB823B61CBD00443A07 /* AppIcon.xcassets in Resources */,
+				292C7AB923B61CBD00443A07 /* flatJSON.txt in Resources */,
+				292C7ABA23B61CBD00443A07 /* Localizable.strings in Resources */,
+				292C7ABB23B61CBD00443A07 /* Images.xcassets in Resources */,
+				292C7ABC23B61CBD00443A07 /* arrayMapping.txt in Resources */,
+				292C7ABD23B61CBD00443A07 /* LaunchScreen.xib in Resources */,
+				292C7ABE23B61CBD00443A07 /* Main.storyboard in Resources */,
+				292C7ABF23B61CBD00443A07 /* optionalArrayElements.txt in Resources */,
+				292C7AC023B61CBD00443A07 /* allKeys.txt in Resources */,
+				292C7AC123B61CBD00443A07 /* Shared.xcconfig in Resources */,
+				292C7AC223B61CBD00443A07 /* keyOptions.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCE1AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,6 +459,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		292C7AA423B61CBD00443A07 /* XcodeVersion */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = XcodeVersion;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "file=\"$SRCROOT/XcodeVersion.properties\"\n\n# create file if it does not exist\ntouch \"${file}\"\n\n# if file does not exist or it is not readable -> error\nif [ ! -r \"${file}\" ]\nthen\necho \"error: Could not create file: ${file} (see the Xcode Version script in Build Phases)\"\nerror -1\nfi\n# read the keys and values in the file\nwhile IFS='=' read -r key value\ndo\neval \"${key}='${value}'\"\ndone < \"${file}\"\n\n# if not defined the keys: XCODE_VERSION_MAJOR_REQUIRED, XCODE_VERSION_MINOR_REQUIRED, XCODE_VERSION_ACTUAL_REQUIRED\nif ([ -z ${XCODE_VERSION_MAJOR_REQUIRED:+\"1\"} ] || [ -z ${XCODE_VERSION_MINOR_REQUIRED:+\"1\"} ] || [ -z ${XCODE_VERSION_ACTUAL_REQUIRED:+\"1\"} ])\nthen\necho \"XCODE_VERSION_MAJOR_REQUIRED=${XCODE_VERSION_MAJOR}\" > \"${file}\"\necho \"XCODE_VERSION_MINOR_REQUIRED=${XCODE_VERSION_MINOR}\" >> \"${file}\"\necho \"XCODE_VERSION_ACTUAL_REQUIRED=${XCODE_VERSION_ACTUAL}\" >> \"${file}\"\n\necho \"warning: Required Xcode version set to ${XCODE_VERSION_ACTUAL} in this project. If you want to build this project with a different version of Xcode, please remove XcodeVersion.properties file\"\nelif [ ${XCODE_VERSION_MAJOR_REQUIRED} != ${XCODE_VERSION_MAJOR} ]\nthen\necho \"error: The required version of Xcode to run this project is ${XCODE_VERSION_MAJOR_REQUIRED} and the current version of Xcode is ${XCODE_VERSION_MAJOR}. If you want to build this project with a different version of Xcode, please remove XcodeVersion.properties file\"\nerror 0\nelif ([ ${XCODE_VERSION_MINOR_REQUIRED} != ${XCODE_VERSION_MINOR} ] || [ ${XCODE_VERSION_ACTUAL_REQUIRED} != ${XCODE_VERSION_ACTUAL} ])\nthen\necho \"warning: XCODE VERSION CONFLICT: The required version of Xcode to run this project is ${XCODE_VERSION_ACTUAL_REQUIRED} and the current version of Xcode is ${XCODE_VERSION_ACTUAL}. This might cause some problems at runtime.\"\nfi\n";
+		};
 		5CC7B7262243E7D60034969C /* XcodeVersion */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -380,9 +495,52 @@
 			shellPath = /bin/sh;
 			shellScript = "file=\"$SRCROOT/XcodeVersion.properties\"\n\n# create file if it does not exist\ntouch \"${file}\"\n\n# if file does not exist or it is not readable -> error\nif [ ! -r \"${file}\" ]\nthen\necho \"error: Could not create file: ${file} (see the Xcode Version script in Build Phases)\"\nerror -1\nfi\n# read the keys and values in the file\nwhile IFS='=' read -r key value\ndo\neval \"${key}='${value}'\"\ndone < \"${file}\"\n\n# if not defined the keys: XCODE_VERSION_MAJOR_REQUIRED, XCODE_VERSION_MINOR_REQUIRED, XCODE_VERSION_ACTUAL_REQUIRED\nif ([ -z ${XCODE_VERSION_MAJOR_REQUIRED:+\"1\"} ] || [ -z ${XCODE_VERSION_MINOR_REQUIRED:+\"1\"} ] || [ -z ${XCODE_VERSION_ACTUAL_REQUIRED:+\"1\"} ])\nthen\necho \"XCODE_VERSION_MAJOR_REQUIRED=${XCODE_VERSION_MAJOR}\" > \"${file}\"\necho \"XCODE_VERSION_MINOR_REQUIRED=${XCODE_VERSION_MINOR}\" >> \"${file}\"\necho \"XCODE_VERSION_ACTUAL_REQUIRED=${XCODE_VERSION_ACTUAL}\" >> \"${file}\"\n\necho \"warning: Required Xcode version set to ${XCODE_VERSION_ACTUAL} in this project. If you want to build this project with a different version of Xcode, please remove XcodeVersion.properties file\"\nelif [ ${XCODE_VERSION_MAJOR_REQUIRED} != ${XCODE_VERSION_MAJOR} ]\nthen\necho \"error: The required version of Xcode to run this project is ${XCODE_VERSION_MAJOR_REQUIRED} and the current version of Xcode is ${XCODE_VERSION_MAJOR}. If you want to build this project with a different version of Xcode, please remove XcodeVersion.properties file\"\nerror 0\nelif ([ ${XCODE_VERSION_MINOR_REQUIRED} != ${XCODE_VERSION_MINOR} ] || [ ${XCODE_VERSION_ACTUAL_REQUIRED} != ${XCODE_VERSION_ACTUAL} ])\nthen\necho \"warning: XCODE VERSION CONFLICT: The required version of Xcode to run this project is ${XCODE_VERSION_ACTUAL_REQUIRED} and the current version of Xcode is ${XCODE_VERSION_ACTUAL}. This might cause some problems at runtime.\"\nfi\n";
 		};
+		A1B33FD1D1BC7F31D394EDEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SDOSKeyedCodableSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		292C7AA523B61CBD00443A07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				292C7AA623B61CBD00443A07 /* ExampleDetailViewController.swift in Sources */,
+				292C7AA723B61CBD00443A07 /* IndentedObject.swift in Sources */,
+				292C7AA823B61CBD00443A07 /* BoolSpecialCase.swift in Sources */,
+				292C7AA923B61CBD00443A07 /* AppDelegate.swift in Sources */,
+				292C7AAA23B61CBD00443A07 /* ExampleModel.swift in Sources */,
+				292C7AAB23B61CBD00443A07 /* ExampleListViewController.swift in Sources */,
+				292C7AAC23B61CBD00443A07 /* ExampleProtocol.swift in Sources */,
+				292C7AAD23B61CBD00443A07 /* ShopDTO.swift in Sources */,
+				292C7AAE23B61CBD00443A07 /* InitialViewController.swift in Sources */,
+				292C7AAF23B61CBD00443A07 /* Constants.swift in Sources */,
+				292C7AB023B61CBD00443A07 /* KeyOptionsExampleDTO.swift in Sources */,
+				292C7AB123B61CBD00443A07 /* CountryNames.swift in Sources */,
+				292C7AB223B61CBD00443A07 /* PaymentMethodDTO.swift in Sources */,
+				292C7AB323B61CBD00443A07 /* SimpleElementDTO.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,9 +592,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		607FACED1AFB9204008FA782 /* Debug */ = {
+		292C7AC423B61CBD00443A07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5C8068FE22140A3A00FFACC3 /* App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON_ASSETS)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = Y5G9RYLF8Y;
+				INFOPLIST_FILE = App/Configuration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_PACKAGE_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "DEV Generic";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		292C7AC523B61CBD00443A07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 292C7AC823B61D9600443A07 /* App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON_ASSETS)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = App/Configuration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_PACKAGE_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		607FACED1AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -490,7 +689,6 @@
 		};
 		607FACEE1AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C8068FE22140A3A00FFACC3 /* App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -538,11 +736,12 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 292C7AC923B61DE500443A07 /* App.Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON_ASSETS)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Y5G9RYLF8Y;
-				INFOPLIST_FILE = "$(SRCROOT)/App/Configuration/Info.plist";
+				INFOPLIST_FILE = App/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,11 +757,12 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 292C7ACA23B61DE500443A07 /* App.Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON_ASSETS)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/App/Configuration/Info.plist";
+				INFOPLIST_FILE = App/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -579,6 +779,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		292C7AC323B61CBD00443A07 /* Build configuration list for PBXNativeTarget "SDOSKeyedCodableSampleSPM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				292C7AC423B61CBD00443A07 /* Debug */,
+				292C7AC523B61CBD00443A07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "SDOSKeyedCodableSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -599,21 +808,9 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		298EE44122E57E3A00D0A590 /* XCRemoteSwiftPackageReference "SDOSKeyedCodable" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@svrgitpub.sdos.es:iOS/SDOSKeyedCodable.git";
-			requirement = {
-				branch = feature/spm;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		298EE44222E57E3A00D0A590 /* SDOSKeyedCodable */ = {
+		292C7AA323B61CBD00443A07 /* SDOSKeyedCodable */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 298EE44122E57E3A00D0A590 /* XCRemoteSwiftPackageReference "SDOSKeyedCodable" */;
 			productName = SDOSKeyedCodable;
 		};
 /* End XCSwiftPackageProductDependency section */
