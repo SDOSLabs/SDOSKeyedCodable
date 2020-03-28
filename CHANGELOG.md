@@ -1,3 +1,7 @@
+## [1.1.1 Fixed a crash when encoding objects](https://github.com/SDOSLabs/SDOSKeyedCodable/tree/v1.1.1)
+
+- Fixed a crash when encoding objects
+
 ## [1.1.0 Mejoras de parseo](https://github.com/SDOSLabs/SDOSKeyedCodable/tree/v1.1.0)
 
 - Corregido crash en proyecto de ejemplo al pulsar el botón de "Ver ejemplo"

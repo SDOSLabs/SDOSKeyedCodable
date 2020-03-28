@@ -30,8 +30,14 @@ SDOSKeyedCodable no tiene dependencias.
 
 Usaremos [CocoaPods](https://cocoapods.org). Hay que añadir la dependencia al `Podfile`:
 
+Añadir el  "source" al `Podfile`:
 ```ruby
-pod 'SDOSKeyedCodable', '~>1.0.1' 
+source 'https://github.com/SDOSLabs/cocoapods-specs.git'
+```
+
+Añadir la dependencia al `Podfile`:
+```ruby
+pod 'SDOSKeyedCodable', '~>1.1.' 
 ```
 
 ## La librería
