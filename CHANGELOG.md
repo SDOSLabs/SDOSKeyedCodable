@@ -1,3 +1,7 @@
+## [HEAD]
+
+- Add support for Swift Package Manager
+
 ## [1.1.1 Fixed a crash when encoding objects](https://github.com/SDOSLabs/SDOSKeyedCodable/tree/v1.1.1)
 
 - Fixed a crash when encoding objects
