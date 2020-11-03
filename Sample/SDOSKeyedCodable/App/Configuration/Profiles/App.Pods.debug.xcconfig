@@ -1,0 +1,10 @@
+//
+//  App.debug.xcconfig
+//  SDOSKeyedCodable
+//
+//  Created by Antonio Jesús Pallares on 13/02/2019.
+//  Copyright © 2019 SDOS. All rights reserved.
+//
+#include "App.debug.xcconfig"
+#include "Pods/Target Support Files/Pods-SDOSKeyedCodableSample/Pods-SDOSKeyedCodableSample.debug.xcconfig"
+
