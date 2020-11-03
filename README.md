@@ -31,11 +31,12 @@ SDOSKeyedCodable no tiene dependencias.
 
 ### Cocoapods
 
-Usaremos [CocoaPods](https://cocoapods.org). Hay que añadir la dependencia al `Podfile`:
+Usaremos [CocoaPods](https://cocoapods.org).
 
-Añadir el  "source" al `Podfile`:
+Añadir el "source" privado de SDOSLabs al `Podfile`. Añadir también el "source" público de cocoapods para poder seguir instalando dependencias desde éste:
 ```ruby
-source 'https://github.com/SDOSLabs/cocoapods-specs.git'
+source 'https://github.com/SDOSLabs/cocoapods-specs.git' #SDOSLabs source
+source 'https://github.com/CocoaPods/Specs.git' #Cocoapods source
 ```
 
 Añadir la dependencia al `Podfile`:
@@ -55,7 +56,7 @@ Debemos abrir nuestro proyecto en Xcode y seleccionar el proyecto para abrir su 
 https://github.com/SDOSLabs/SDOSKeyedCodable.git
 ```
 
-En el siguiente paso deberemos seleccionar la versión que queremos instalar. Recomentamos indicar "Up to Next Major" 1.2.0.
+En el siguiente paso deberemos seleccionar la versión que queremos instalar. Recomentamos indicar "Up to Next Major" `1.2.0`.
 
 Por último deberemos indicar el o los targets donde se deberá incluir la librería
 
