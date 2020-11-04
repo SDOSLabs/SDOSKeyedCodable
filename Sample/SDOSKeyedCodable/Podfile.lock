@@ -1,7 +1,7 @@
 PODS:
-  - SDOSKeyedCodable (1.0.1):
-    - SDOSKeyedCodable/KeyedCodable (= 1.0.1)
-  - SDOSKeyedCodable/KeyedCodable (1.0.1)
+  - SDOSKeyedCodable (1.1.1):
+    - SDOSKeyedCodable/KeyedCodable (= 1.1.1)
+  - SDOSKeyedCodable/KeyedCodable (1.1.1)
 
 DEPENDENCIES:
   - SDOSKeyedCodable (from `../../`)
@@ -11,8 +11,8 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  SDOSKeyedCodable: 510f20ed013e5c54e8fee48ffe4035d1d5894325
+  SDOSKeyedCodable: ab2c67a68591756a035366d235e2174c9d23d31f
 
 PODFILE CHECKSUM: 9bc3db8c49caa98b6726add06816423e4a1f8809
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.3
